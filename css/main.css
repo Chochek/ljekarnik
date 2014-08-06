@@ -118,10 +118,13 @@ body {
   font-size: 13px;
   border-top: 4px solid #eeeeee;
 }
-a {
+a,
+a:visited {
+  outline: 0 !important;
   color: #333333;
 }
-a:hover {
+a:hover,
+a:visited:hover {
   color: #6db038 !important;
   text-decoration: none;
 }
@@ -475,13 +478,15 @@ footer .footer-payment-methods p {
 .product-wrapper {
   padding: 15px;
   background: #f6f6f6;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px;
+}
+.product-wrapper .ribbon {
+  margin-left: 0;
+  z-index: 10;
 }
 .product-wrapper #active-wrapper {
   position: relative;
   width: 100%;
-  height: 0 !important;
-  padding-bottom: 100%;
   background: white;
   overflow: hidden;
   margin: 0 0 10px 0;
@@ -535,8 +540,12 @@ footer .footer-payment-methods p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.product-wrapper .product-information {
+  padding-right: 5px;
+}
 .product-wrapper .product-header {
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .product-wrapper .product-header-title .product-title {
   font-size: 18px;
@@ -556,13 +565,95 @@ footer .footer-payment-methods p {
   font-size: 24px;
   color: #6db038;
 }
-.product-wrapper .tabs-panels .panel {
+.product-wrapper .vendor-message {
+  background: #604c8f;
+  color: white;
+  border: none;
+}
+.product-wrapper .tabs-wrapper {
+  padding: 0 5px;
+}
+.product-wrapper .tabs-wrapper .nav-tabs li.active {
+  position: relative;
+  z-index: 20;
+}
+.product-wrapper .tabs-wrapper .nav-tabs li.active a {
+  border-bottom: none;
+}
+.product-wrapper .tab-content {
+  position: relative;
+  z-index: 10;
+  background: white;
   border-radius: 0 0 4px 4px;
-  border-style: none solid solid;
-  border-width: 0 1px 1px;
-  border-color: transparent #dddddd #dddddd;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddddd;
   padding: 10px 15px 5px;
+  margin-top: -2px;
+}
+.product-wrapper .product-reviews-header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #604c8f;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.product-wrapper .product-reviews-summary {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.product-wrapper .product-reviews {
+  margin-top: 20px;
+  display: none;
+}
+.product-wrapper .product-review {
+  border-top: 1px solid #d7d7d7;
+  padding: 15px 0;
+}
+.product-wrapper .product-review .product-review-header-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+  color: #604c8f;
+}
+.product-wrapper .product-review .product-review-header-byline {
+  font-style: italic;
+}
+.product-wrapper .product-review .product-review-content {
+  margin: 15px 0;
+}
+.product-wrapper .product-review .product-review-footer {
+  text-align: right;
+  font-size: 11px;
+}
+.product-wrapper .product-review .product-review-footer a {
+  text-decoration: underline;
+}
+.product-wrapper .review-form {
+  border-top: 1px solid #d7d7d7;
+  padding: 15px 0;
+  margin-top: 20px;
+  display: none;
+}
+.product-wrapper .review-form .review-form-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #604c8f;
+}
+.product-wrapper .review-form .review-form-review-body textarea {
+  resize: vertical;
+}
+.product-wrapper .review-form .review-rate-product {
+  font-size: 20px;
+}
+.product-wrapper .review-form .review-rate-product i {
+  cursor: pointer;
 }
 .product-text-box {
   border: 1px solid #d7d7d7;
+  margin: 10px 0;
+  padding: 15px 15px 5px;
+}
+.related-products {
+  margin: 30px 0;
 }

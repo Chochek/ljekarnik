@@ -64,6 +64,9 @@
         <div class="row main-content">
             <div class="col-md-10">
                 <div class="product-wrapper col-xs-12">
+                    <div class="ribbon">
+                        <span class="ribbon-content">Besplatna dostava</span>
+                    </div>
 
                     <div id="gallery" class="col-sm-5 col-xs-12 no-padding">
                         <div class="active-wrapper-outer">
@@ -79,12 +82,12 @@
                                 </a>
                             </li>
                             <li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                                <a href="img/product/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_1024x102.jpg">
-                                    <img class="img-responsive" src="img/product/Aronia-maticni-sok-0_7L_thumb.jpg" />
+                                <a href="img/product/Aronia-maticni-sok-3L_1024x1024.jpg">
+                                    <img class="img-responsive" src="img/product/Aronia-maticni-sok-3L_thumb.jpg" />
                                 </a>
                             </li>
                             <li class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                                <a href="img/product/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_1024x102.jpg">
+                                <a href="img/product/Aronia-maticni-sok-0_7L_1024x1024.jpg">
                                     <img class="img-responsive" src="img/product/Aronia-maticni-sok-0_7L_thumb.jpg" />
                                 </a>
                             </li>
@@ -93,7 +96,7 @@
                     </div><!-- /#gallery -->
 
                     <div class="product-information col-sm-7 col-xs-12">
-                        <div class="product-header border-top border-bottom">
+                        <div class="product-header border-bottom">
                             <div class="product-header-title col-sm-6">
                                 <h1 class="product-title">Aronija Original matični sok</h1>
                                 <h2 class="product-vendor"><a title="Aronia original" href="/">Aronia original</a></h2>
@@ -130,12 +133,12 @@
                             <p>Za blagotvoran antioksidativni učinak 100% čistog matičnog soka sibirske aronije, preporučuje se uzimanje svega 0,5 decilitara na dan.</p>
                         </div>
 
-                        <div class="product-reviews product-text-box">
+                        <div class="product-reviews-wrapper product-text-box">
                             <div class="product-reviews-header">
                                 <h2 class="product-reviews-header-title">Recenzije i ocjene</h2>
 
                                 <div class="product-reviews-summary">
-                                    <div class="rating-wrapper">
+                                    <div class="product-rating-wrapper col-md-6 no-padding">
                                         <span class="star-rating">
                                             <i class="glyphicon glyphicon-star"></i>
                                             <i class="glyphicon glyphicon-star"></i>
@@ -145,7 +148,7 @@
                                         </span>
                                         <a href="#"><span class="star-rating-caption">Broj recenzija: 31</span></a>
                                     </div>
-                                    <span class="spr-summary-actions">
+                                    <span class="spr-summary-actions col-md-6 no-padding text-right">
                                         <a class="new-review" href="#">Ocijenite proizvod</a>
                                     </span>
                                 </div>
@@ -153,10 +156,124 @@
 
                             <div class="product-reviews-content">
                                 <div class="review-form">
-                                    
+                                    <form action="/" method="post">
+                                        <h3 class="review-form-title">Napiši komentar</h3>
+                                        <fieldset class="review-form-contact">
+                                            <div class="form-group review-form-contact-name">
+                                                <label for="review_author" class="review-form-label">Ime i prezime</label>
+                                                <input type="text" placeholder="Unesite svoje ime i prezime" value="" name="review_author" id="review_author" class="review-form-input form-control">
+                                            </div>
+
+                                            <div class="review-form-contact-email form-group">
+                                                <label for="review_email" class="review-form-label">Email</label>
+                                                <input type="email" placeholder="ime.prezime@primjer.com" value="" name="review_email" id="review_email" class="review-form-input form-control">
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset class="review-form-content">
+
+                                            <div class="review-form-review-rating form-group">
+                                                <label for="review_rating" class="review-form-label">Ocjena</label>
+                                                <div class="review-rate-product">
+                                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                                </div>
+                                                <input id="review_rating" tabindex="-1" value="0" class="form-control hidden">
+                                            </div>
+
+                                            <div class="review-form-review-title form-group">
+                                                <label for="review_title" class="review-form-label">Naslov komentara</label>
+                                                <input type="text" placeholder="Napišite naslov komentara proizvoda" value="" name="review_title" id="review_title" class="review-form-input form-control">
+                                            </div>
+
+                                            <div class="review-form-review-body form-group">
+                                                <label for="review_body" class="review-form-label">
+                                                    Komentar <span class="review-form-review-body-characters-remaining">(1500)</span>
+                                                </label>
+                                                <div class="review-form-input">
+                                                    <textarea placeholder="U ovom polju upišite svoje komentare o proizvodu" rows="10" name="review_body" id="review_body" class="review-form-input form-control"></textarea>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <fieldset class="review-form-actions text-right">
+                                            <button type="submit" class="review-button btn btn-primary">Pošalji komentar i ocjenu</button>
+                                        </fieldset>
+                                    </form>
                                 </div>
-                                <div class="user-reviews">
-                                    
+                                <div class="product-reviews">
+                                    <div class="product-review">
+                                        <div class="product-review-header">
+                                            <span class="product-review-star-rating">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star-empty"></i>
+                                            </span>
+                                            <h3 class="product-review-header-title">Pomaže kada su stres i loše životne navike svakodnevica!</h3>
+                                            <span class="product-review-header-byline">
+                                                <strong>Ivana Kovačić</strong> dana <strong>24.04.14</strong>
+                                            </span>
+                                        </div>
+
+                                        <div class="product-review-content">
+                                            <p>Studentica sam i isprobala sam ovaj proizvod! Bolji je od ostalih antioksidansa i okusom i učinkom. Dobro dođe kada se zbog životnih navika ne hranimo zdravo i ne živimo zdravo.Ovaj proizvod kao da ''resetira'' organizam. Definitivno moja preporuka studentima i poslovnim ljudima.</p>
+                                        </div>
+
+                                        <div class="product-review-footer">
+                                            <a href="#" class="report-review">Prijavi kao neprikladno</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-review">
+                                        <div class="product-review-header">
+                                            <span class="product-review-star-rating">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star-empty"></i>
+                                            </span>
+                                            <h3 class="product-review-header-title">Pomaže kada su stres i loše životne navike svakodnevica!</h3>
+                                            <span class="product-review-header-byline">
+                                                <strong>Ivana Kovačić</strong> dana <strong>24.04.14</strong>
+                                            </span>
+                                        </div>
+
+                                        <div class="product-review-content">
+                                            <p>Studentica sam i isprobala sam ovaj proizvod! Bolji je od ostalih antioksidansa i okusom i učinkom. Dobro dođe kada se zbog životnih navika ne hranimo zdravo i ne živimo zdravo.Ovaj proizvod kao da ''resetira'' organizam. Definitivno moja preporuka studentima i poslovnim ljudima.</p>
+                                        </div>
+
+                                        <div class="product-review-footer">
+                                            <a href="#" class="report-review">Prijavi kao neprikladno</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-review">
+                                        <div class="product-review-header">
+                                            <span class="product-review-star-rating">
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star"></i>
+                                                <i class="glyphicon glyphicon-star-empty"></i>
+                                            </span>
+                                            <h3 class="product-review-header-title">Pomaže kada su stres i loše životne navike svakodnevica!</h3>
+                                            <span class="product-review-header-byline">
+                                                <strong>Ivana Kovačić</strong> dana <strong>24.04.14</strong>
+                                            </span>
+                                        </div>
+
+                                        <div class="product-review-content">
+                                            <p>Studentica sam i isprobala sam ovaj proizvod! Bolji je od ostalih antioksidansa i okusom i učinkom. Dobro dođe kada se zbog životnih navika ne hranimo zdravo i ne živimo zdravo.Ovaj proizvod kao da ''resetira'' organizam. Definitivno moja preporuka studentima i poslovnim ljudima.</p>
+                                        </div>
+
+                                        <div class="product-review-footer">
+                                            <a href="#" class="report-review">Prijavi kao neprikladno</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -164,14 +281,14 @@
                     </div>
 
                     <div class="tabs-wrapper col-xs-12 no-padding">
-                        <ul class="nav nav-tabs" role="tablist">
+                        <ul id="product-tabs" class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#tab-1">Opis</a></li>
                             <li><a href="#tab-2">Djelovanje i upotreba</a></li>
                             <li><a href="#tab-3">Sastav</a></li>
                             <li><a href="#tab-4">Ostalo</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane fade active in" id="tab-1">
+                            <div class="tab-pane active" id="tab-1">
                                 <div>
                                     <p>Najjači antioksidans na tržištu! Bez konzervansa!</p>
                                     <p>100% čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i pažljiva obrada jamči čistoću i prepoznatljivost okusa Aronija soka.</p>
@@ -179,32 +296,118 @@
                                     <p>Proizvod posjeduje oznaku DE-034-Eko Control čime jamči provjerenu kvalitetu kao i zadovoljenje visokih kriterija i standarda eko proizvodnje. Ne sadrži konzervanse, umjetne boje, okuse i mirise.</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="tab-2">
+                            <div class="tab-pane" id="tab-2">
                                 <div>
-                                    <p>Najjači antioksidans na tržištu! Bez konzervansa!</p>
-                                    <p>100% čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i pažljiva obrada jamči čistoću i prepoznatljivost okusa Aronija soka.</p>
-                                    <p>Aronija je bobičasto voće koje liči na borovnicu i nešto je oporijeg okusa.</p>
-                                    <p>Proizvod posjeduje oznaku DE-034-Eko Control čime jamči provjerenu kvalitetu kao i zadovoljenje visokih kriterija i standarda eko proizvodnje. Ne sadrži konzervanse, umjetne boje, okuse i mirise.</p>
+                                    <p>Aronija služi detoksikaciji organizma smanjenjem utjecaja slobodnih radikala na tijelo. Smanjenje utjecaja slobodnih radikala može povoljno djelovati na zaštitu od malignih oboljenja.</p>
+                                    <p>Aronija zvog svojeg sastava poboljno djeluje na cirkulaciju, ublažava glavobolje, povišen krvni tlak, probavni sustav te podiže imunitet i kazuje da sprječava razvoj virusnih i bakterijskih infekcija.</p>
+                                    <p>Smiruje želudac i bolove, dobra je za sve koji pate od čireva. U litarturi se njen blagotvoran utjecaj na rad zuči i jetre.</p>
+                                    <p>Preporučuje se konzumacija samo 0,5 decilitara ovog soka dnevno.</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="tab-3">
+                            <div class="tab-pane" id="tab-3">
                                 <div>
-                                    <p>Najjači antioksidans na tržištu! Bez konzervansa!</p>
-                                    <p>100% čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i pažljiva obrada jamči čistoću i prepoznatljivost okusa Aronija soka.</p>
-                                    <p>Aronija je bobičasto voće koje liči na borovnicu i nešto je oporijeg okusa.</p>
-                                    <p>Proizvod posjeduje oznaku DE-034-Eko Control čime jamči provjerenu kvalitetu kao i zadovoljenje visokih kriterija i standarda eko proizvodnje. Ne sadrži konzervanse, umjetne boje, okuse i mirise.</p>
+                                    <p>Aronija u svojim plodovima sadrži veliku koncentraciju antioksidansa (tanine, biofenole, flavonoide, antocijanine, katehine)</p>
+                                    <p>Sadrži vitamine C, A, E, B2, B6, B9, i vrlo rijetki vitamin P.</p>
+                                    <p>Ona također sadrži i minerale, posebno željezo, kalcij, kalij, mangan, fosfor, jod i molibden</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="tab-4">
+                            <div class="tab-pane" id="tab-4">
                                 <div>
-                                    <p>Najjači antioksidans na tržištu! Bez konzervansa!</p>
-                                    <p>100% čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i pažljiva obrada jamči čistoću i prepoznatljivost okusa Aronija soka.</p>
-                                    <p>Aronija je bobičasto voće koje liči na borovnicu i nešto je oporijeg okusa.</p>
-                                    <p>Proizvod posjeduje oznaku DE-034-Eko Control čime jamči provjerenu kvalitetu kao i zadovoljenje visokih kriterija i standarda eko proizvodnje. Ne sadrži konzervanse, umjetne boje, okuse i mirise.</p>
+                                    <p>Preporučene dnevne doze ne smiju se prekoračiti. Dodatak prehrani nije nadomjestak ili zamjena uravnoteženoj prehrani.</p>
+                                    <p>Uzimanje pojedinih dodataka prehrani kod nekih osoba može uzrokovati alergijske reakcije. Prije uzimanja proizvoda dobro proučite njegov sastav. Ukoliko niste sigurni smijete li uzimati neki proizvod savjetujte se s liječnikom ili ljekarnikom prije uzimanja. U slučaju alergijske reakcije prekinite s uzimanjem proizvoda i odmah se obratite liječniku.</p>
+                                    <p>Ukoliko uz dodatak prehrani koristite i neki lijek, prije uporabe ovog proizvoda pažljivo pročitate uputu o lijeku. Za obavijesti o indikacijama, mjerama opreza i nuspojavama upitajte svog liječnika ili ljekarnika.</p>
+                                    <p>Za svako dijagnosticiranje i liječenje bolesti posjetite Vašeg liječnika. Vitamini, minerali i drugi dodaci prehrani ne mogu zamijeniti propisani lijek bez izričite suglasnosti i preporuke liječnika.</p>
+                                    <p>Ova web stranica ljekarnik.hr nije namijenjena dijagnosticiranju niti propisivanju terapije i stoga ne preuzima nikakvu odgovornost.</p>
                                 </div>
                             </div>
                         </div>
                     </div> <!-- end .tabs-wrapper -->
+                </div>
+
+                <div class="col-xs-12 no-padding related-products">
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <h3><a href="/product.html">Aronija Original matični sok</a></h3>
+                                <p>Najjači antioksidans na tržištu! Bez konzervansa! 100%
+                                čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom
+                                hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno
+                                jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i
+                                pažljiva obrada jamči čistoću...</p>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner">
+                            <div class="ribbon">
+                                <span class="ribbon-content">Besplatna dostava</span>
+                            </div>
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price sale label">
+                                     159,20 kn <small>prije: 199,00 kn</small>
+                                </span>
+                                <h3><a href="/product.html">Aronija Original matični sok</a></h3>
+                                <p>Najjači antioksidans na tržištu! Bez konzervansa! 100%
+                                čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom
+                                hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno
+                                jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i
+                                pažljiva obrada jamči čistoću...</p>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <h3><a href="/product.html">Aronija Original matični sok</a></h3>
+                                <p>Najjači antioksidans na tržištu! Bez konzervansa! 100%
+                                čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom
+                                hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno
+                                jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i
+                                pažljiva obrada jamči čistoću...</p>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <h3><a href="/product.html">Aronija Original matični sok</a></h3>
+                                <p>Najjači antioksidans na tržištu! Bez konzervansa! 100%
+                                čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom
+                                hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno
+                                jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i
+                                pažljiva obrada jamči čistoću...</p>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
                 </div>
             </div>
 
@@ -324,10 +527,18 @@
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/enhance-gallery.js"></script>
 
     <script>
         window.onload = $('#gallery').enhanceGallery();
+
+        $(function() {
+            $('#product-tabs a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
     </script>
 
 </body>

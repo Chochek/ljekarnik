@@ -7,7 +7,7 @@
         activeImageId : '#active-image',
         loadingLabel: 'Učitavanje...'
       };
-  var $thumbList, $activeWrapper, $loading;
+  var $thumbList, $activeWrapper, $loading, activeImageUrl;
 
 
   $.fn.enhanceGallery = function(options){
@@ -20,13 +20,15 @@
     $activeWrapper = $(settings.activeWrapperId);
     $loading = $('<div id="active-image-loading">'+settings.loadingLabel+'</div>');
 
-    preloadImage( $thumbList.find('a:first').attr('href') ); // preload 1st image
+    activeImageUrl = $thumbList.find('a:first').attr('href')
+    preloadImage( activeImageUrl ); // preload 1st image
     $thumbList.find('li:first').addClass('active-thumb');
 
     $thumbList.find('a').click( function(e){
       $thumbList.children('li').removeClass('active-thumb');
       $(this).parent().addClass('active-thumb');
-      preloadImage( this.href );
+      activeImageUrl = this.href;
+      preloadImage( activeImageUrl );
       e.preventDefault();
     });
 
@@ -121,6 +123,11 @@
     }
     return false;
   }
+
+  // on resize refresh the active image size
+  $(window).resize(function() {
+    preloadImage(activeImageUrl);
+  })
 
 
 })(jQuery);
