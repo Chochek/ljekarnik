@@ -15,7 +15,16 @@ $(function() {
     // Star rating when adding a new review on the product page
     $('.review-rate-product i').on('click', function(e, elem) {
         e.preventDefault();
-        console.log($('.review-rate-product i').index(this));
+        var starIndex = this;
+        $.each($('.review-rate-product').children('i'), function(index, value) {
+            if (index <= $('.review-rate-product i').index(starIndex)) {
+                $(this).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+            }
+            else {
+                $(this).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+            }
+        });
+
         $('#review_rating').val($('.review-rate-product i').index(this) + 1);
     });
 })
