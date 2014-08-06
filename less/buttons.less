@@ -1,0 +1,45 @@
+.btn-primary {
+  .button-variant(white; @purple; darken(@purple, 5%););
+}
+
+.btn-default {
+  .button-variant(white; @gray-light; darken(@gray-light, 5%););
+}
+
+.btn-cart {
+  color: white;
+  background: @red;
+  border-color: darken(@red, 5%);
+
+  &.no-items {
+    color: white;
+    background-color: @gray-light;
+    border-color: darken(@gray-light, 5%);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: white;
+    background-color: @green;
+    border-color: darken(@green, 5%);
+  }
+}
+
+.btn-add-to-cart {
+  color: white;
+  background: @purple;
+  border-color: darken(@purple, 5%);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: white;
+    background-color: @green;
+    border-color: darken(@green, 5%);
+  }
+}

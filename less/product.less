@@ -1,0 +1,102 @@
+.product-wrapper {
+  padding: 15px;
+  background: @gray-lighter;
+  border-radius: 4px 4px 0 0;
+
+  #active-wrapper{
+    position: relative;
+    width: 100%;
+    height: 0 !important;
+    padding-bottom: 100%;
+    background: white;
+    overflow: hidden;
+    margin: 0 0 10px 0;
+    border-width: 0 5px;
+    border-style: none solid;
+    border-color: @gray-lighter;
+    img{
+      display: block;
+      &.unzoomed {
+        position: absolute;
+        display: block;
+        top: 50% !important;
+        left: 50% !important;
+        .translate(-50%, -50%);
+      }
+      &.zoomed{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    #active-image-loading{
+    }
+  }
+  .product-thumbs {
+    list-style: none;
+    padding: 0;
+    li {
+      position: relative;
+      padding: 0 5px;
+      margin-bottom: 10px;
+      &.active-thumb a, &:hover a {
+        border-color: @green;
+      }
+      a {
+        border: 1px solid @border-color;
+        background: none repeat scroll 0 0 white;
+        display: block;
+        height: 0;
+        padding-bottom: 100%;
+        width: 100%;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          .translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .product-header {
+    overflow: hidden;
+  }
+  .product-header-title {
+    .product-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: @purple;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .product-vendor {
+      font-size: 12px;
+      margin-top: 0;
+    }
+  }
+  .purchase {
+    margin-top: 18px;
+    .price {
+      font-size: 24px;
+      color: @green;
+    }
+  }
+
+  .tabs-wrapper {
+  }
+
+  .tabs-panels {
+    .panel {
+      border-radius: 0 0 4px 4px;
+      border-style: none solid solid;
+      border-width: 0 1px 1px;
+      border-color: transparent #dddddd #dddddd;
+      padding: 10px 15px 5px;
+    }
+  }
+}
+
+.product-text-box {
+  border: 1px solid @border-color;
+}

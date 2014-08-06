@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="AppCtrl">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>Ljekarnik</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.custom.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css">
+
+    <!-- Ljekarnik styles -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="row">
+            <h1 class="logo-container">
+                <a title="Naslovna" href="/">
+                    <img alt="Ljekarnik.hr" src="img/logo.png">
+                </a>
+            </h1>
+
+            <div class="cart-area">
+                <ul>
+                    <li>
+                        <a id="customer_login_link" href="/account/login">Prijavite se</a>
+                    </li>
+                    <li>
+                        <a id="customer_register_link" href="/account/register">Registrirajte se</a>
+                    </li>
+                    <li class="cart-link">
+                        <a class="num-items-in-cart" href="/cart">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span>0 proizvoda</span>
+                        </a>
+                    </li>
+                    <li class="checkout-link">
+                        <a class="btn btn-cart no-items" href="/cart">Naručivanje</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 header-search-placeholder">
+
+                <form method="get" action="/search" id="header-search">
+                    <div class="form-group">
+                        <label class="sr-only" for="top-search-input">Pretraži</label>
+                        <input type="text" placeholder="Tražite proizvod? Ovdje počnite upisivati naziv i odaberite ga iz liste koja će se pojaviti..." autocomplete="off" accesskey="4" class="search-input ui-autocomplete-input form-control" name="q" id="top-search-input" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </form>
+
+            </div>
+        </header>
+
+        <div class="row main-content">
+            <div class="col-md-10">
+                <header class="category-details col-xs-12 no-padding">
+                    <h2 class="category-title">Apivita</h2>
+                    <div class="category-description">
+                        <p>Prirodna kozmetika inspirirana moći pčela, čuvarica života i prirodnoga svijeta, te njihovim čudotvornim produktima</p>
+                        <p>Ugodite svojem tijelu inovativnim prirodnim proizvodima obogaćenim propolisom, medom i pčelinjim voskom, ekstraktima biljaka iz bogate grčke flore te organskim eteričnim uljima. Pronađite svoj sklad s prirodom.</p>
+                        <p>Apivita obuhvaća nekoliko kozmetičkih linija:</p>
+
+                        <p>
+                            <a title="Apivita Aqua vita &ndash; hidratacija kože" href="http://ljekarnik.hr/collections/apivita-aqua-vita">Aqua vita &ndash; hidratacija kože</a> |
+                            <a title="Apivita Queen bee &ndash; obnova kože" href="http://ljekarnik.hr/collections/apivita-queen-bee">Queen bee &ndash; obnova kože</a> |
+                            <a title="Apivita Cleansing &ndash; čišćenje lica" href="http://ljekarnik.hr/collections/apivita-cleansing">Cleansing &ndash; čišćenje lica</a> |
+                            <a title="Apivita Wine elixir &ndash; protiv starenja" href="http://ljekarnik.hr/collections/apivita-wine-elixir">Wine elixir &ndash; protiv starenja</a> |
+                            <a title="Apivita Express beauty i Express gold &ndash; maske za lice" href="http://ljekarnik.hr/collections/apivita-express-maske-za-lice">Express beauty i Express gold &ndash; maske za lice</a> |
+                            <a title="Apivita Body &ndash; njega tijela" href="http://ljekarnik.hr/collections/apivita-body">Body &ndash; njega tijela</a> |
+                            <a title="Apivita Intimate &ndash; intimna njega" href="http://ljekarnik.hr/collections/apivita-intimate">Intimate &ndash; intimna njega</a> |
+                            <a title="Apivita Propoline &ndash; njega kose" href="http://ljekarnik.hr/collections/apivita-propoline">Propoline &ndash; njega kose</a> |
+                            <a title="Apivita Lip care &ndash; njega usana" href="http://ljekarnik.hr/collections/apivita-lip-care">Lip care &ndash; njega usana</a> |
+                            <a title="Apivita Prirodni serumi za lice" href="http://ljekarnik.hr/collections/apivita-prirodni-serumi">Prirodni serumi za lice</a> |
+                            <a title="Apivita Prirodni tvrdi sapuni" href="http://ljekarnik.hr/collections/apivita-prirodni-tvrdi-sapuni">Prirodni tvrdi sapuni</a> |
+                            <a title="Apivita Prirodni organski čajevi" href="http://ljekarnik.hr/collections/apivita-prirodni-organski-cajevi">Prirodni organski čajevi</a>
+                        </p>
+                    </div>
+                </header>
+
+                <div class="products col-xs-12 no-padding">
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="ribbon">
+                                <span class="ribbon-content">Besplatna dostava</span>
+                            </div>
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="ribbon">
+                                <span class="ribbon-content">Besplatna dostava</span>
+                            </div>
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="ribbon">
+                                <span class="ribbon-content">Besplatna dostava</span>
+                            </div>
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                    <div class="product col-md-3 col-sm-6">
+                        <div class="product-inner with-rating">
+                            <div class="product-image">
+                                <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
+                                    <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/GLOW_dnevna_krema_s_rubinom_medium.jpg">
+                                </a>
+                            </div>
+                            <div class="product-information">
+                                <span class="product-price label">
+                                    <small>od</small> 42,90 kn
+                                </span>
+                                <a class="product-description" href="/product.html">Dr. Brandt Glow Ruby Crystal dnevna krema s retinolom za trenutnu blistavost tena 50 g</a>
+                            </div>
+                            <div class="rating-wrapper">
+                                <span class="star-rating">
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star"></i>
+                                    <i class="glyphicon glyphicon-star-empty"></i>
+                                </span>
+                                <span class="star-rating-caption">Ocijenjeno 7 puta</span>
+                            </div>
+                        </div>
+                    </div> <!-- end .product-wrapper -->
+                </div>
+                <div class="pagination-wrapper text-center">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">&laquo; Natrag</a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Naprijed &raquo;</a></li>
+                    </ul>
+                    <p class="pagination-details">Prikaz: 1-12 od 89</p>
+                </div>
+            </div>
+
+            <div class="col-md-2 sidebar hidden-xs hidden-sm">
+                <div class="banner">
+                    <img class="img-responsive" alt="" src="img/sidebar/kokosov_maslac_mrkva.jpg">
+                </div>
+                <div class="banner guarantee">
+                    <a target="_blank" href="http://ljekarnik.hr/pages/reklamacije-i-povrati">
+                        <img alt="Ljekarnik.hr" src="img/sidebar/jamstvo1.png">
+                    </a>
+                </div>
+                <div class="banner ask">
+                    <a target="_blank" href="http://ljekarnik.hr/pages/reklamacije-i-povrati">
+                        <img alt="Ljekarnik.hr" src="img/sidebar/ask1.png">
+                    </a>
+                    <button class="btn btn-primary">Pitaj ljekarnika</button>
+                </div>
+                <div class="widget widget-linklist">
+                    <div class="widget-header">
+                        <h2>Novo u ponudi</h2>
+                    </div>
+                    <div class="widget-content">
+                        <ul>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Lekovita" href="/collections/lekovita">Lekovita</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Natura Siberica" href="/collections/natura-siberica">Natura Siberica</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="dr. Hauschka" href="/collections/dr-hauschka">dr. Hauschka</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Hug Your Life" href="/collections/hug-your-life">Hug Your Life</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Kal" href="/collections/kal">Kal</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Solaray" href="/collections/solaray">Solaray</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Natrol" href="/collections/natrol">Natrol</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Enterosgel" href="/products/enteros-gel-za-uklanjanje-toksina-iz-organizma">Enterosgel</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-caret-right"></i>
+                                <a title="Naturya" href="/collections/naturya">Naturya</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="widget widget-mailing-list">
+                    <div class="widget-header">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <div class="widget-content">
+                        <p>Proizvodi i akcije</p>
+                    </div>
+                    <form target="_blank" class="validate" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form" method="post" action="http://ljekarnik.us4.list-manage.com/subscribe/post?u=f827ee3890fac1c389252e13c&amp;id=0b708737ab">
+                        <input type="email" class="email-input form-control" name="EMAIL" placeholder="tvoja@adresa.com">
+                        <button type="submit" class="email-submit btn btn-primary">Prijava</button>
+                    </form>
+                </div>
+                <div class="banner text-center">
+                    <a target="_blank" href="https://pci.usd.de/compliance/3583-4ED2-BBB9-9F69-C219-3FA5/details_en.html">
+                        <img src="img/sidebar/seal_ctv_80.png">
+                    </a>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top border-bottom">
+                <div class="footer-left col-md-10">
+                    <ul class="footer-nav">
+                        <li><a href="http://ljekarnik.hr/pages/opci-uvjeti-prodaje-proizvoda-na-ljekarnik-hr">Opći uvjeti</a></li>
+                        <li><a href="http://ljekarnik.hr/pages/pravila-koristenja-besplatnog-savjetovalista">Besplatno savjetovalište</a></li>
+                        <li><a href="http://ljekarnik.hr/pages/dostava">Dostava</a></li>
+                        <li><a href="http://ljekarnik.hr/pages/reklamacije-i-povrati">Reklamacije i povrati</a></li>
+                        <li><a href="http://ljekarnik.hr/pages/privatnost-i-zastita-osobnih-podataka">Privatnost</a></li>
+                        <li><a href="http://ljekarnik.hr/pages/about-us">O nama</a></li>
+                        <li><a href="http://ljekarnik.hr/blogs/novosti">Zanimljivosti</a></li>
+                    </ul>
+                    <p>&copy; 2014 <a href="http://ljekarnik.hr/">Ljekarnik.hr</a>. Sva prava pridržana.<br></p>
+                </div>
+
+                <div class="footer-right col-md-2">
+                    <ul class="social-icons">
+                        <li><a class="social-icon" title="Ljekarnik.hr on Twitter" href="http://www.twitter.com/Ljekarnik"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Facebook" href="http://www.facebook.com/Ljekarnik"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Google+" href="https://google.com/+LjekarnikHr"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-payment-methods col-md-12 text-center">
+                <p>Načini plaćanja</p>
+                <img alt="" src="img/cc-visa.png">
+                <img alt="" src="img/cc-mastercard.png">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/adjustHeights.js"></script>
+
+</body>
+</html>
