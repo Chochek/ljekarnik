@@ -118,18 +118,23 @@ body {
   font-size: 13px;
   border-top: 4px solid #eeeeee;
 }
-a,
-a:visited {
+a:not(.btn):not(.social-icon),
+a:not(.btn):not(.social-icon):visited {
   outline: 0 !important;
-  color: #333333;
+  color: #333333 !important;
 }
-a:hover,
-a:visited:hover {
+a:not(.btn):not(.social-icon):hover,
+a:not(.btn):not(.social-icon):visited:hover {
   color: #6db038 !important;
   text-decoration: none;
 }
 .no-padding {
   padding: 0;
+}
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell;
+  }
 }
 h1,
 h2,
@@ -780,4 +785,165 @@ footer .footer-payment-methods p {
 }
 .account-page .customer-details p {
   margin-bottom: 5px;
+}
+.checkout-process-status {
+  height: 148px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+}
+.checkout-process-status > div {
+  position: relative;
+  width: 100%;
+}
+.checkout-process-status img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.checkout-process-status.step-1 {
+  padding: 0 15px;
+}
+.checkout-process-status.step-2 img {
+  top: -158px;
+}
+.checkout-process-status.step-3 img {
+  top: -316px;
+}
+.checkout-process-status.step-4 img {
+  top: -474px;
+}
+.checkout-page .table-responsive {
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+}
+.checkout-page .table-responsive table {
+  margin-bottom: 0;
+}
+.checkout-page .table-responsive table td {
+  vertical-align: middle !important;
+}
+.checkout-page .table-responsive .product-image {
+  width: 60px;
+  text-align: center;
+}
+.checkout-page .table-responsive .product-image img {
+  float: none;
+}
+.checkout-page .table-responsive .product-price {
+  text-align: center;
+}
+.checkout-page .table-responsive .product-quantity {
+  text-align: center;
+  width: 90px;
+}
+.checkout-page .table-responsive .product-quantity input {
+  text-align: center;
+  width: 45px;
+  display: inline;
+}
+.checkout-page .table-responsive .product-amount {
+  text-align: center;
+}
+.checkout-page .table-responsive .product-remove {
+  width: 80px;
+}
+.checkout-page .checkout-actions {
+  margin-top: 20px;
+}
+.checkout-page .checkout-actions .user-notes {
+  margin: -5px 0 5px;
+}
+.checkout-page .checkout-actions .user-notes-text {
+  display: none;
+  resize: vertical;
+}
+.checkout-page.step-2 .cart-area,
+.checkout-page.step-3 .cart-area,
+.checkout-page.step-2 .header-search-placeholder,
+.checkout-page.step-3 .header-search-placeholder {
+  display: none;
+}
+.checkout-page.step-2 .page-wrapper,
+.checkout-page.step-3 .page-wrapper {
+  background: none;
+  padding: 0;
+}
+.checkout-page.step-2 .page-wrapper .new-order > div,
+.checkout-page.step-3 .page-wrapper .new-order > div {
+  background: #f6f6f6;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.checkout-page.step-2 .addresses .checkout-address,
+.checkout-page.step-3 .addresses .checkout-address {
+  padding: 0 15px 0 0;
+  border-right: 1px solid #d7d7d7;
+}
+.checkout-page.step-2 .addresses .checkout-notes,
+.checkout-page.step-3 .addresses .checkout-notes {
+  padding: 0 0 0 15px;
+}
+.checkout-page.step-2 .addresses .panel,
+.checkout-page.step-3 .addresses .panel {
+  padding: 10px 10px 5px;
+}
+.checkout-page.step-2 .addresses .checkout-section-title,
+.checkout-page.step-3 .addresses .checkout-section-title {
+  margin-bottom: 15px;
+}
+.checkout-page.step-2 .alt-address,
+.checkout-page.step-3 .alt-address {
+  display: none;
+}
+.checkout-page label.checkout-section-title {
+  font-size: 17px;
+  color: #604c8f;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #d7d7d7;
+  width: 100%;
+}
+.checkout-page .checkout-summary {
+  text-align: center;
+}
+.checkout-page .checkout-summary > * {
+  border-bottom: 1px solid #d7d7d7;
+  padding-bottom: 10px;
+}
+.checkout-page .checkout-summary h1 {
+  margin-top: 1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.checkout-page .payment-method .btn-group {
+  margin: 10px 0 20px;
+}
+.checkout-page .payment-method .credit-card-data > .first-name {
+  padding-right: 5px;
+}
+.checkout-page .payment-method .credit-card-data > .last-name {
+  padding-left: 5px;
+}
+.checkout-page .payment-method .cc-code small {
+  margin-top: 5px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .checkout-page .payment-method .credit-card-data > .first-name {
+    padding-right: 0;
+  }
+  .checkout-page .payment-method .credit-card-data > .last-name {
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .checkout-page .payment-method .credit-card-data > .first-name {
+    padding-right: 0;
+  }
+  .checkout-page .payment-method .credit-card-data > .last-name {
+    padding-left: 0;
+  }
 }

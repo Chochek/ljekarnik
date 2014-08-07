@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="AppCtrl">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>Ljekarnik</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.custom.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css">
+
+    <!-- Ljekarnik styles -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container checkout-page">
+        <header class="row">
+            <h1 class="logo-container">
+                <a title="Naslovna" href="/">
+                    <img alt="Ljekarnik.hr" src="img/logo.png">
+                </a>
+            </h1>
+
+            <div class="cart-area">
+                <ul>
+                    <li>
+                        <a class="customer-login-link" href="/login.html">Prijavite se</a>
+                    </li>
+                    <li>
+                        <a class="customer-register-link" href="/register.html">Registrirajte se</a>
+                    </li>
+                    <li class="cart-link">
+                        <a class="num-items-in-cart" href="/checkout.html">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span>0 proizvoda</span>
+                        </a>
+                    </li>
+                    <li class="checkout-link">
+                        <a class="btn btn-cart no-items" href="/checkout.html">Naručivanje</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 header-search-placeholder">
+
+                <form method="get" action="/search" id="header-search">
+                    <div class="form-group">
+                        <label class="sr-only" for="top-search-input">Pretraži</label>
+                        <input type="text" placeholder="Tražite proizvod? Ovdje počnite upisivati naziv i odaberite ga iz liste koja će se pojaviti..." autocomplete="off" accesskey="4" class="search-input ui-autocomplete-input form-control" name="q" id="top-search-input" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </form>
+
+            </div>
+        </header>
+
+        <div class="row main-content">
+            <div class="checkout-process-status step-1">
+                <div><img src="img/checkout-process-status.png" class="img-responsive"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="page-wrapper">
+                    <div class="page-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="product-image"></th>
+                                        <th class="product-details">Proizvod</th>
+                                        <th class="product-price">Cijena</th>
+                                        <th class="product-quantity">Količina</th>
+                                        <th class="product-amount">Iznos</th>
+                                        <th class="product-remove"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-image">
+                                            <img alt="HUG Green Coffee &amp; L-Carnitine kapsule 60x500 mg" src="img/greencoffe_thumb.png">
+                                        </td>
+                                        <td class="product-details">
+                                            <a href="/product.html">HUG Green Coffee & L-Carnitine kapsule 60x500 mg</a>
+                                        </td>
+                                        <td class="product-price">159,20 kn</td>
+                                        <td class="product-quantity">
+                                            <input class="form-control" value="1">
+                                        </td>
+                                        <td class="product-amount">159,20 kn</td>
+                                        <td class="product-remove">
+                                            <button class="btn btn-primary">Ukloni</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-image">
+                                            <img alt="HUG Green Coffee &amp; L-Carnitine kapsule 60x500 mg" src="img/greencoffe_thumb.png">
+                                        </td>
+                                        <td class="product-details">
+                                            <a href="/product.html">HUG Green Coffee & L-Carnitine kapsule 60x500 mg</a>
+                                        </td>
+                                        <td class="product-price">159,20 kn</td>
+                                        <td class="product-quantity">
+                                            <input class="form-control" value="2">
+                                        </td>
+                                        <td class="product-amount">318,40 kn</td>
+                                        <td class="product-remove">
+                                            <button class="btn btn-primary">Ukloni</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <thead>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <td class="product-quantity">
+                                            <button class="btn btn-primary">Osvježi</button>
+                                        </td>
+                                        <td class="product-amount">477,60 kn</td>
+                                        <td class="product-remove"></td>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="checkout-actions">
+                            <div class="col-sm-8 no-padding">
+                                <a href="#" class="user-notes pull-left">Vaše napomene...</a>
+                                <textarea class="user-notes-text pull-left form-control"></textarea>
+                            </div>
+                            <div class="col-sm-4 no-padding">
+                                <a role="button" href="/checkout-2.html" class="btn btn-cart pull-right">Nastavi na sljedeći korak</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+    <footer class="row">
+        <div class="container">
+            <div class="footer-top border-bottom">
+                <div class="footer-left col-md-10">
+                    <ul class="footer-nav">
+                        <li><a href="/page.html">Opći uvjeti</a></li>
+                        <li><a href="/page.html">Besplatno savjetovalište</a></li>
+                        <li><a href="/page.html">Dostava</a></li>
+                        <li><a href="/page.html">Reklamacije i povrati</a></li>
+                        <li><a href="/page.html">Privatnost</a></li>
+                        <li><a href="/page.html">O nama</a></li>
+                        <li><a href="/posts.html">Zanimljivosti</a></li>
+                    </ul>
+                    <p>&copy; 2014 <a href="http://ljekarnik.hr/">Ljekarnik.hr</a>. Sva prava pridržana.<br></p>
+                </div>
+
+                <div class="footer-right col-md-2">
+                    <ul class="social-icons">
+                        <li><a class="social-icon" title="Ljekarnik.hr on Twitter" href="http://www.twitter.com/Ljekarnik"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Facebook" href="http://www.facebook.com/Ljekarnik"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Google+" href="https://google.com/+LjekarnikHr"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-payment-methods col-md-12 text-center">
+                <p>Načini plaćanja</p>
+                <img alt="" src="img/cc-visa.png">
+                <img alt="" src="img/cc-mastercard.png">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/adjustHeights.js"></script>
+
+</body>
+</html>

@@ -56,4 +56,34 @@ $(function() {
 
         $('#review_rating').val($('.review-rate-product i').index(this) + 1);
     });
+
+
+    //
+    // Checkout pages
+    // ------------------------------
+
+    $('.checkout-actions .user-notes').on('click', function(e) {
+        e.preventDefault();
+        $('.user-notes-text').toggle();
+    });
+
+    $('.checkout-address .checkbox input').on('click', function() {
+        var checkbox = $(this);
+        if (checkbox.is(':checked')) {
+            $('.checkout-notes').children('.panel').hide().siblings('.alt-address').show();
+        }
+        else {
+            $('.checkout-notes').children('.panel').show().siblings('.alt-address').hide();
+        }
+    });
+
+    $('.payment-method .option1').on('click', function(e) {
+        $('.credit-card-data').show();
+        console.log("aaa");
+    });
+
+    $('.payment-method .option2, payment-method .option3').on('click', function(e) {
+        $('.credit-card-data').hide();
+        console.log("bbb");
+    });
 })

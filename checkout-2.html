@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" ng-controller="AppCtrl">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <title>Ljekarnik</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.custom.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/font-awesome.min.css">
+
+    <!-- Ljekarnik styles -->
+    <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container checkout-page step-2">
+        <header class="row">
+            <h1 class="logo-container">
+                <a title="Naslovna" href="/">
+                    <img alt="Ljekarnik.hr" src="img/logo.png">
+                </a>
+            </h1>
+
+            <div class="cart-area">
+                <ul>
+                    <li>
+                        <a class="customer-login-link" href="/login.html">Prijavite se</a>
+                    </li>
+                    <li>
+                        <a class="customer-register-link" href="/register.html">Registrirajte se</a>
+                    </li>
+                    <li class="cart-link">
+                        <a class="num-items-in-cart" href="/checkout.html">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span>0 proizvoda</span>
+                        </a>
+                    </li>
+                    <li class="checkout-link">
+                        <a class="btn btn-cart no-items" href="/checkout.html">Naručivanje</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-xs-12 header-search-placeholder">
+
+                <form method="get" action="/search" id="header-search">
+                    <div class="form-group">
+                        <label class="sr-only" for="top-search-input">Pretraži</label>
+                        <input type="text" placeholder="Tražite proizvod? Ovdje počnite upisivati naziv i odaberite ga iz liste koja će se pojaviti..." autocomplete="off" accesskey="4" class="search-input ui-autocomplete-input form-control" name="q" id="top-search-input" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </form>
+
+            </div>
+        </header>
+
+        <div class="row main-content">
+            <div class="col-md-10">
+                <div class="page-wrapper">
+                    <div class="page-content">
+                        <div class="checkout-process-status step-2">
+                            <div><img src="img/checkout-process-status.png" class="img-responsive"></div>
+                        </div>
+                        <div class="new-order">
+                            <div class="email">
+                                <label class="checkout-section-title" for="order-email">Vaš email</label>
+                                <h4 class="active-customer">ime.prezime@gmail.com</h4>
+                                <span class="sign-in-message">Nisi Ime? <a class="customer-login-link" href="/login.html">Prijavi se kao drugi korisnik</a></span>
+                            </div>
+                            <div class="addresses">
+                                <div class="col-sm-6 checkout-address">
+                                    <label class="checkout-section-title">Adresa kupca</label>
+                                    <div class="form-group">
+                                        <label for="first-name">Ime</label>
+                                        <input class="form-control" id="first-name" name="first_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Prezime</label>
+                                        <input class="form-control" id="last-name" name="last_name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Tvrtka</label>
+                                        <input class="form-control" id="company" name="company">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Adresa</label>
+                                        <input class="form-control" id="address" name="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address2">Adresa 2</label>
+                                        <input class="form-control" id="address2" name="address2">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="city">Mjesto</label>
+                                        <input class="form-control" id="city" name="city">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zip-code">Poštanski broj</label>
+                                        <input class="form-control" id="zip-code" name="zip_code">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country">Država</label>
+                                        <select id="country" name="country">
+                                            <option value="Croatia">Croatia</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefon</label>
+                                        <input class="form-control" id="phone" name="phone">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Dostava proizvoda na adresu kupca
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 checkout-notes">
+                                    <label class="checkout-section-title">Alternativna adresa za dostavu</label>
+                                    <div class="panel">
+                                        <p>Proizvodi se šalju na adresu kupca. Ukoliko želite da se proizvodi pošalju na neku drugu, alternativnu adresu za dostavu, u lijevom stupcu odznačite kvačicu s nazivom "Dostava proizvoda na adresu kupca" i moći ćete unijeti drugu, alternativnu adresu.</p>
+                                    </div>
+                                    <div class="alt-address">
+                                        <div class="form-group">
+                                            <label for="first-name">Ime</label>
+                                            <input class="form-control" id="first-name" name="first_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="last-name">Prezime</label>
+                                            <input class="form-control" id="last-name" name="last_name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="company">Tvrtka</label>
+                                            <input class="form-control" id="company" name="company">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Adresa</label>
+                                            <input class="form-control" id="address" name="address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address2">Adresa 2</label>
+                                            <input class="form-control" id="address2" name="address2">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">Mjesto</label>
+                                            <input class="form-control" id="city" name="city">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip-code">Poštanski broj</label>
+                                            <input class="form-control" id="zip-code" name="zip_code">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country">Država</label>
+                                            <select id="country" name="country">
+                                                <option value="Croatia">Croatia</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Telefon</label>
+                                            <input class="form-control" id="phone" name="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-actions">
+                        <div class="">
+                            <a role="button" href="/checkout-3.html" class="btn btn-cart">Nastavi na sljedeći korak</a>
+                            <small id="cancel-purchase">ili <a href="/">povratak u web trgovinu</a></small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2 sidebar hidden-xs hidden-sm">
+                <div class="checkout-summary">
+                    <h1>159,20 kn</h1>
+                    <p>
+                        <small>... uključujući 31,84 kn poreza</small><br>
+                        korak 1 od 2
+                    </p>
+                </div>
+            </div>
+    </div>
+
+    <footer class="row">
+        <div class="container">
+            <div class="footer-top border-bottom">
+                <div class="footer-left col-md-10">
+                    <ul class="footer-nav">
+                        <li><a href="/page.html">Opći uvjeti</a></li>
+                        <li><a href="/page.html">Besplatno savjetovalište</a></li>
+                        <li><a href="/page.html">Dostava</a></li>
+                        <li><a href="/page.html">Reklamacije i povrati</a></li>
+                        <li><a href="/page.html">Privatnost</a></li>
+                        <li><a href="/page.html">O nama</a></li>
+                        <li><a href="/posts.html">Zanimljivosti</a></li>
+                    </ul>
+                    <p>&copy; 2014 <a href="http://ljekarnik.hr/">Ljekarnik.hr</a>. Sva prava pridržana.<br></p>
+                </div>
+
+                <div class="footer-right col-md-2">
+                    <ul class="social-icons">
+                        <li><a class="social-icon" title="Ljekarnik.hr on Twitter" href="http://www.twitter.com/Ljekarnik"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Facebook" href="http://www.facebook.com/Ljekarnik"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="social-icon" title="Ljekarnik.hr on Google+" href="https://google.com/+LjekarnikHr"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-payment-methods col-md-12 text-center">
+                <p>Načini plaćanja</p>
+                <img alt="" src="img/cc-visa.png">
+                <img alt="" src="img/cc-mastercard.png">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/adjustHeights.js"></script>
+
+</body>
+</html>
