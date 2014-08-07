@@ -118,13 +118,13 @@ body {
   font-size: 13px;
   border-top: 4px solid #eeeeee;
 }
-a:not(.btn):not(.social-icon),
-a:not(.btn):not(.social-icon):visited {
+a,
+a:visited {
   outline: 0 !important;
-  color: #333333 !important;
+  color: #333333;
 }
-a:not(.btn):not(.social-icon):hover,
-a:not(.btn):not(.social-icon):visited:hover {
+a:hover,
+a:visited:hover {
   color: #6db038 !important;
   text-decoration: none;
 }
