@@ -766,3 +766,15 @@ footer .footer-payment-methods p {
 .customer-register .action-bottom {
   margin-top: 30px;
 }
+.account-page .customer-details {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+.account-page .customer-details .customer-name {
+  color: #604c8f;
+  font-weight: bold;
+  font-size: 15px;
+}
+.account-page .customer-details p {
+  margin-bottom: 5px;
+}
