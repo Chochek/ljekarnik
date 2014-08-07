@@ -63,52 +63,61 @@
         <div class="row main-content">
             <div class="col-md-10">
                 <div class="page-wrapper">
-                    <div class="customer-login col-xs-12">
+                    <div class="customer-register col-xs-12">
                         <div class="page-header">
-                            <h2 class="page-title">Prijava registriranih korisnika</h2>
+                            <h2 class="page-title">Izrada korisničkog računa</h2>
                         </div>
-                        <form method="post" id="customer-login" action="/account/login" accept-charset="UTF-8" class="col-sm-6 no-padding">
-
-                            <div class="login-email form-group">
-                                <label for="customer-email">Email adresa</label>
-                                <input type="email" size="30" class="form-control" id="customer-email" name="customer_email" value="">
+                        <form method="post" id="create-customer" action="/account" accept-charset="UTF-8" class="col-sm-6 no-padding">
+                            <div class="first-name form-group">
+                                <label for="first-name">Ime</label>
+                                <input type="text" size="30" class="form-control" id="first-name" name="first_name" value="">
                             </div>
 
+                            <div class="last-name form-group">
+                                <label for="last-name">Prezime</label>
+                                <input type="text" size="30" class="form-control" id="last-name" name="last_name" value="">
+                            </div>
 
-                            <div class="login-password form-group">
-                                <label for="customer-password">Lozinka</label>
-                                <input type="password" size="16" class="form-control" id="customer-password" name="customer_password" value="">
-                                <div class="forgot-password">
-                                    <a href="#">Zaboravili ste lozinku?</a>
+                            <div class="email form-group">
+                                <label for="email">Email adresa</label>
+                                <input type="email" size="30" class="form-control" id="email" name="customer_email" value="">
+                            </div>
+
+                            <div class="account-type form-group">
+                                <label>Vrsta korisnika</label>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary active private-type">
+                                        <input type="radio" name="options" id="private" checked> Privatni
+                                    </label>
+                                    <label class="btn btn-primary business-type">
+                                        <input type="radio" name="options" id="business"> Poslovni
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="company-data">
+                                <div class="company-name form-group">
+                                    <label class="login" for="company-name">Tvrtka</label>
+                                    <input type="text" size="30" class="form-control" id="company-name" name="company_name" value="">
+                                </div>
+
+                                <div class="vat-id form-group">
+                                    <label class="login" for="vat-id">OIB</label>
+                                    <input type="text" size="30" class="form-control" id="vat-id" name="vat_id" value="">
                                 </div>
                             </div>
 
+                            <div class="password form-group">
+                                <label class="login" for="password">Lozinka</label>
+                                <input type="password" size="30" class="form-control" id="password" name="password" value="">
+                            </div>
 
                             <div class="action-bottom">
-                                <button type="submit" class="btn btn-primary">Prijavi se</button>
-                                <span class="note">ili se <a href="/">vrati</a> na web trgovinu</span>
+                                <button type="submit" class="btn btn-primary">Potvrdi izradu korisničkog računa</button>
                             </div>
                         </form>
-                    </div><!-- end .customer-login -->
-
-                    <div class="recover-password col-xs-12">
-                        <div class="page-header">
-                            <h2 class="page-title">Zatraži postavljanje nove lozinke</h2>
-                        </div>
-
-                        <p class="note">Poslat ćemo Vam email za postavljanje nove lozinke.</p>
-
-                        <form method="post" action="/account/recover" accept-charset="UTF-8" class="col-sm-6 no-padding">
-                            <div class="recover_email form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="recover-email" name="email" size="30" value="">
-                            </div>
-                            <div class="action-bottom forgot-password">
-                                <button type="submit" class="btn btn-primary">Potvrdi</button>
-                                <span class="note">ili <a href="#">odustani</a></span>
-                            </div>
-                        </form>
-                    </div><!-- end .recover-password -->
+                    </div><!-- end .customer-register -->
                 </div>
 
             </div>

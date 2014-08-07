@@ -11,6 +11,21 @@ $(function() {
 
 
     //
+    // Register page
+    // ------------------------------
+
+    $('.account-type .business-type').on('click', function(e) {
+        $('.company-data').show();
+        console.log("aaa");
+    });
+
+    $('.account-type .private-type').on('click', function(e) {
+        $('.company-data').hide();
+        console.log("bbb");
+    });
+
+
+    //
     // Product page
     // ------------------------------
 

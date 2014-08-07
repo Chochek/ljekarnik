@@ -751,3 +751,18 @@ footer .footer-payment-methods p {
 .recover-password {
   display: none;
 }
+.customer-register {
+  margin: 5px 0 15px;
+}
+.customer-register .account-type {
+  overflow: hidden;
+}
+.customer-register .account-type .btn-group {
+  display: block;
+}
+.customer-register .company-data {
+  display: none;
+}
+.customer-register .action-bottom {
+  margin-top: 30px;
+}
