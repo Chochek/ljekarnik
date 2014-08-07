@@ -667,6 +667,7 @@ footer .footer-payment-methods p {
   padding: 15px;
   background: #f6f6f6;
   border-radius: 4px;
+  overflow: hidden;
 }
 .page-wrapper .page-header {
   margin: 0 0 15px;
@@ -734,4 +735,19 @@ footer .footer-payment-methods p {
   font-style: italic;
   font-size: 11px;
   color: #999999;
+}
+.customer-login,
+.recover-password {
+  margin: 5px 0 15px;
+}
+.customer-login .forgot-password,
+.recover-password .forgot-password {
+  margin-top: 10px;
+}
+.customer-login .note > a,
+.recover-password .note > a {
+  text-decoration: underline;
+}
+.recover-password {
+  display: none;
 }

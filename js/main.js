@@ -1,5 +1,19 @@
 $(function() {
 
+    //
+    // Login page
+    // ------------------------------
+
+    $('.forgot-password a').on('click', function(e) {
+        e.preventDefault();
+        $('.recover-password').toggle();
+    });
+
+
+    //
+    // Product page
+    // ------------------------------
+
     // toggle product reviews on the product page
     $('.product-rating-wrapper .star-rating-caption').on('click', function(e) {
         e.preventDefault();
