@@ -775,6 +775,9 @@ footer .footer-payment-methods p {
   font-weight: bold;
   font-size: 15px;
 }
+.account-page .customer-details .customer-addresses {
+  margin-top: 15px;
+}
 .account-page .customer-details p {
   margin-bottom: 5px;
 }
