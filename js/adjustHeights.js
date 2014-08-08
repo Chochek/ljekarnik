@@ -21,9 +21,7 @@ function columnConform() {
 		var $el = $(this).children('.product-inner');
 
 		var topPosition = $el.parent().position().top;
-		//currentRowStart = (currentRowStart == 0) ? topPosition : currentRowStart;
 
-		console.log($el.parent().position());
 		if (currentRowStart != topPosition) {
 
 			// we just came to a new row.  Set all the heights on the completed row
@@ -34,8 +32,6 @@ function columnConform() {
 			currentRowStart = topPosition;
 			currentTallest = getOriginalHeight($el);
 			rowDivs.push($el);
-
-			console.log($el, currentRowStart, currentTallest);
 
 		} else {
 			// another div on the current row.  Add it to the list and check if it's taller

@@ -113,23 +113,46 @@ fieldset[disabled] .btn-default.active {
   background-color: #6db038;
   border-color: #619d32;
 }
+#counseling-modal .modal-title {
+  font-size: 20px;
+  color: #604c8f;
+}
+#counseling-modal .modal-body {
+  overflow: hidden;
+  padding: 15px 0 0;
+  position: relative;
+}
+#counseling-modal .counseling-form {
+  margin: 15px 0;
+}
+#counseling-modal .pharmacist-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#counseling-modal textarea {
+  resize: vertical;
+}
 body {
   color: #666666;
   font-size: 13px;
   border-top: 4px solid #eeeeee;
 }
-a,
-a:visited {
+a:not(.btn):not(.social-icon),
+a:not(.btn):not(.social-icon):visited {
   outline: 0 !important;
   color: #333333;
 }
-a:hover,
-a:visited:hover {
+a:not(.btn):not(.social-icon):hover,
+a:not(.btn):not(.social-icon):visited:hover {
   color: #6db038 !important;
   text-decoration: none;
 }
 .no-padding {
   padding: 0;
+}
+textarea {
+  min-height: 70px;
 }
 @-moz-document url-prefix() {
   fieldset {
@@ -191,12 +214,19 @@ h3 {
 .pagination-wrapper .pagination {
   margin-bottom: 5px;
 }
+.pagination-wrapper .pagination .active a,
 .pagination-wrapper .pagination .active:hover a,
 .pagination-wrapper .pagination .active a:hover {
   color: white !important;
 }
 header {
   position: relative;
+}
+.navbar-custom {
+  background: white;
+  border-top: 4px solid #f6f6f6;
+  height: 75px;
+  box-shadow: 0 0 3px white;
 }
 .logo-container {
   padding: 0 20px;
@@ -237,6 +267,7 @@ header {
 .header-search-placeholder {
   padding-right: 55px;
   padding-left: 20px;
+  margin-top: 100px;
 }
 .header-search-placeholder #top-search-input {
   position: relative;
@@ -408,16 +439,19 @@ footer .footer-payment-methods p {
 }
 .product .product-inner {
   background: #f6f6f6;
-  border-radius: 0 0 4px 4px;
+  border: 1px solid #f6f6f6;
+  border-radius: 4px;
 }
 .product .product-inner.with-rating {
   padding-bottom: 50px;
 }
+.product .labels {
+  padding: 3px 5px;
+  height: 25px;
+  background: white;
+}
 .product .product-image {
   background: white;
-  border-color: #f6f6f6;
-  border-style: solid solid none solid;
-  border-width: 1px;
   text-align: center;
 }
 .product .product-image .img-responsive {

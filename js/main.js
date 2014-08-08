@@ -1,6 +1,40 @@
 $(function() {
 
     //
+    // Header shadow
+    // ------------------------------
+
+    function addHeightToHeader() {
+        if ($(window).scrollTop() !== 0 && !$('nav.navbar-custom').hasClass('has-shadow')) {
+            $('nav.navbar-custom').addClass('has-shadow').animate({boxShadow: '0 0 3px #999999'});
+        }
+        if ($(window).scrollTop() === 0 && $('nav.navbar-custom').hasClass('has-shadow')) {
+            $('nav.navbar-custom').removeClass('has-shadow').animate({boxShadow: '0 0 3px #ffffff'});
+        }
+    }
+    addHeightToHeader();
+
+    $(window).scroll(function() {
+        addHeightToHeader();
+    });
+
+
+    //
+    // Counseling modal
+    // ------------------------------
+
+    $('.banner.ask button').on('click', function() {
+        $('#counseling-modal').modal();
+    });
+
+    // TODO: replace or delete
+    $('#counseling-modal .modal-footer .btn-primary').on('click', function() {
+        alert('Pošalji ljekarniku...');
+        $('#counseling-modal').modal('hide');
+    })
+
+
+    //
     // Login page
     // ------------------------------
 
@@ -16,12 +50,10 @@ $(function() {
 
     $('.account-type .business-type').on('click', function(e) {
         $('.company-data').show();
-        console.log("aaa");
     });
 
     $('.account-type .private-type').on('click', function(e) {
         $('.company-data').hide();
-        console.log("bbb");
     });
 
 
@@ -79,11 +111,9 @@ $(function() {
 
     $('.payment-method .option1').on('click', function(e) {
         $('.credit-card-data').show();
-        console.log("aaa");
     });
 
     $('.payment-method .option2, payment-method .option3').on('click', function(e) {
         $('.credit-card-data').hide();
-        console.log("bbb");
     });
 })

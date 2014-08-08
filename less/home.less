@@ -8,16 +8,19 @@
   overflow: hidden;
   .product-inner {
     background: @gray-lighter;
-    border-radius: 0 0 4px 4px;
+    border: 1px solid @gray-lighter;
+    border-radius: 4px;
     &.with-rating {
       padding-bottom: 50px;
     }
   }
+  .labels {
+    padding: 3px 5px;
+    height: 25px;
+    background: white;
+  }
   .product-image {
     background: white;
-    border-color: @gray-lighter;
-    border-style: solid solid none solid;
-    border-width: 1px;
     text-align: center;
     .img-responsive {
       display: inline;
