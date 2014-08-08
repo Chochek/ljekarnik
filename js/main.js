@@ -116,4 +116,13 @@ $(function() {
     $('.payment-method .option2, payment-method .option3').on('click', function(e) {
         $('.credit-card-data').hide();
     });
+
+
+    //
+    // Checkout pages
+    // ------------------------------
+
+    $('.motivator button').on('click', function() {
+        $('.motivator').animate({'bottom': '-1000px'});
+    });
 })

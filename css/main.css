@@ -219,6 +219,23 @@ h3 {
 .pagination-wrapper .pagination .active a:hover {
   color: white !important;
 }
+.motivator {
+  background: #604c8f;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  padding: 20px 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.motivator p {
+  margin: 0;
+}
+.motivator .motivator-balance {
+  color: #eeffbf;
+}
 header {
   position: relative;
 }
@@ -441,13 +458,24 @@ footer .footer-payment-methods p {
   background: #f6f6f6;
   border: 1px solid #f6f6f6;
   border-radius: 4px;
+  padding-bottom: 40px;
 }
 .product .product-inner.with-rating {
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
-.product .labels {
-  padding: 3px 5px;
-  height: 25px;
+.product .product-inner.with-rating .rating-wrapper {
+  bottom: 60px;
+}
+.product .product-inner .btn-buy {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  bottom: 15px;
+  min-width: 60%;
+}
+.product .product-inner .labels {
   background: white;
 }
 .product .product-image {
@@ -482,6 +510,16 @@ footer .footer-payment-methods p {
 .product .product-information .product-price.sale small {
   color: white;
 }
+.labels {
+  min-height: 25px;
+  padding: 3px 5px;
+}
+.labels .label {
+  display: block;
+  float: left;
+  margin-bottom: 3px;
+  margin-right: 3px;
+}
 .rating-wrapper {
   position: absolute;
   bottom: 10px;
@@ -511,6 +549,11 @@ footer .footer-payment-methods p {
 .collection .collection-information a {
   display: block;
 }
+@media (max-width: 767px) {
+  .labels {
+    padding: 0;
+  }
+}
 .category-details .category-description {
   background: #f6f6f6;
   border-radius: 4px;
@@ -521,10 +564,6 @@ footer .footer-payment-methods p {
   padding: 15px;
   background: #f6f6f6;
   border-radius: 4px;
-}
-.product-wrapper .ribbon {
-  margin-left: 0;
-  z-index: 10;
 }
 .product-wrapper #active-wrapper {
   position: relative;
@@ -584,6 +623,9 @@ footer .footer-payment-methods p {
 }
 .product-wrapper .product-information {
   padding-right: 5px;
+}
+.product-wrapper .product-information .product-header-title .product-title {
+  font-size: 24px;
 }
 .product-wrapper .product-header {
   overflow: hidden;
@@ -701,6 +743,11 @@ footer .footer-payment-methods p {
 }
 .related-products {
   margin: 30px 0;
+}
+@media (max-width: 767px) {
+  #active-wrapper {
+    border: none !important;
+  }
 }
 .page-wrapper {
   padding: 15px;
