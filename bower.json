@@ -2,6 +2,7 @@
   "name": "ljekarnik",
   "version": "0.0.0",
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "seiyria-bootstrap-slider": "~3.1.0"
   }
 }

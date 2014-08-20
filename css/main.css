@@ -560,6 +560,27 @@ footer .footer-payment-methods p {
   margin-bottom: 30px;
   padding: 10px 15px 5px;
 }
+.category-banner img {
+  width: 100%;
+}
+.sorting-filtering {
+  margin-bottom: 20px;
+}
+.filtering-dropdown {
+  margin-left: 10px;
+}
+.filters {
+  margin: 0 10px;
+}
+.filters .price-range-slider,
+.filters .min-price-slider,
+.filters .max-price-slider {
+  display: none;
+  margin-top: 7px;
+}
+.filters .brand-dropdown {
+  display: none;
+}
 .product-wrapper {
   padding: 15px;
   background: #f6f6f6;

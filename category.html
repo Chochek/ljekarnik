@@ -15,6 +15,7 @@
 
     <!-- Ljekarnik styles -->
     <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-slider.min.css">
 </head>
 
 <body>
@@ -67,6 +68,11 @@
         <div class="row main-content">
             <div class="col-md-10">
                 <header class="category-details col-xs-12 no-padding">
+                    <div class="category-banner">
+                        <a href="/category.html" class="hidden-xs">
+                            <img src="img/aronija_740x70.png?6028">
+                        </a>
+                    </div>
                     <h2 class="category-title">Apivita</h2>
                     <div class="category-description">
                         <p>Prirodna kozmetika inspirirana moći pčela, čuvarica života i prirodnoga svijeta, te njihovim čudotvornim produktima</p>
@@ -91,6 +97,60 @@
                 </header>
 
                 <div class="products col-xs-12 no-padding">
+                    <div class="sorting-filtering col-xs-12 no-padding">
+                        <div class="dropdown sorting-dropdown pull-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="sortingMenu" data-toggle="dropdown">
+                                Sortiraj
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="sortingMenu">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Najpopularnije</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prvo s najnižom cijenom</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Prvo s najvišom cijenom</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown filtering-dropdown pull-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="filteringMenu" data-toggle="dropdown">
+                                Filtriraj
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="filteringMenu">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#brand">Brand</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#min">Minimalna cijena</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#max">Maksimalna cijena</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#range">Raspon cijene</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="filters pull-left">
+                            <div id="brand" class="brand-dropdown pull-left">
+                                <div class="dropdown pull-left">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="brandMenu" data-toggle="dropdown">
+                                        Brand
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="brandMenu">
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brand 1</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brand 2</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brand 3</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brand 4</a></li>
+                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Brand 5</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="range" class="price-range-slider pull-left">
+                                <b>0 kn</b><input class="price-range-slider" value=""><b>1000 kn</b>
+                            </div>
+                            <div id="min" class="min-price-slider pull-left">
+                                <input class="min-price-slider" value=""><b><span class="min-price-value">500</span> kn</b>
+                            </div>
+                            <div id="max" class="max-price-slider pull-left">
+                                <input class="max-price-slider" value=""><b><span class="max-price-value">500</span> kn</b>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="product col-md-3 col-sm-4 col-xs-6">
                         <div class="product-inner with-rating">
                             <div class="product-image">
@@ -539,6 +599,7 @@
     <script src="js/main.js"></script>
     <script src="js/adjustHeights.js"></script>
     <script src="js/animate-shadow.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
 
 </body>
 </html>
