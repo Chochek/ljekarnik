@@ -581,6 +581,12 @@ footer .footer-payment-methods p {
 .filters .brand-dropdown {
   display: none;
 }
+.product-banner {
+  margin-bottom: 15px;
+}
+.product-banner img {
+  width: 100%;
+}
 .product-wrapper {
   padding: 15px;
   background: #f6f6f6;
@@ -672,6 +678,11 @@ footer .footer-payment-methods p {
 .product-wrapper .purchase .price {
   font-size: 24px;
   color: #6db038;
+  margin-bottom: 0;
+}
+.product-wrapper .purchase .compare-at-price {
+  margin-bottom: 10px;
+  display: block;
 }
 .product-wrapper .vendor-message {
   background: #604c8f;
@@ -698,6 +709,14 @@ footer .footer-payment-methods p {
   border-color: #dddddd;
   padding: 10px 15px 5px;
   margin-top: -2px;
+}
+.product-wrapper .accordion-wrapper .panel-heading {
+  padding: 0;
+}
+.product-wrapper .accordion-wrapper .panel-title a {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
 }
 .product-wrapper .product-reviews-header-title {
   font-size: 24px;
@@ -765,9 +784,116 @@ footer .footer-payment-methods p {
 .related-products {
   margin: 30px 0;
 }
+.product-labels {
+  margin: 15px 0 20px;
+  overflow: hidden;
+}
+.product-label {
+  width: 16.66%;
+  height: 0;
+  padding: 0 0 16.66%;
+  float: left;
+  border: 1px solid #f6f6f6;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+.product-label span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0 5%;
+  width: 100%;
+}
+.product-label.label-bio {
+  background: #009933;
+  font-size: 30px;
+  color: white;
+}
+.product-label.label-eco {
+  background: #669933;
+  font-size: 30px;
+  color: white;
+}
+.product-label.label-gluten-free {
+  background: #cc6633;
+  color: white;
+}
+.product-label.label-sugar-free {
+  background: #ffcc33;
+  color: #333333;
+}
+.product-label.label-vegan {
+  background: #3366cc;
+  color: white;
+}
+.product-label.label-no-artificial-coloring {
+  background: #33cccc;
+  color: #333333;
+}
+.product-label.label-no-perfume {
+  background: #660033;
+  color: white;
+}
 @media (max-width: 767px) {
   #active-wrapper {
     border: none !important;
+  }
+  .product-wrapper .product-information {
+    padding: 0;
+  }
+  .product-label {
+    width: 33.33%;
+    padding: 0 0 33.33%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .product-label.label-bio {
+    font-size: 20px;
+  }
+  .product-label.label-eco {
+    font-size: 20px;
+  }
+  .product-label.label-gluten-free {
+    font-size: 12px;
+  }
+  .product-label.label-sugar-free {
+    font-size: 11px;
+  }
+  .product-label.label-vegan {
+    font-size: 11px;
+  }
+  .product-label.label-no-artificial-coloring {
+    font-size: 11px;
+  }
+  .product-label.label-no-perfume {
+    font-size: 11px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-label.label-bio {
+    font-size: 20px;
+  }
+  .product-label.label-eco {
+    font-size: 20px;
+  }
+  .product-label.label-gluten-free {
+    font-size: 12px;
+  }
+  .product-label.label-sugar-free {
+    font-size: 11px;
+  }
+  .product-label.label-vegan {
+    font-size: 11px;
+  }
+  .product-label.label-no-artificial-coloring {
+    font-size: 11px;
+  }
+  .product-label.label-no-perfume {
+    font-size: 11px;
   }
 }
 .page-wrapper {

@@ -67,6 +67,11 @@
 
         <div class="row main-content">
             <div class="col-md-10">
+                <div class="product-banner">
+                    <a href="/category.html" class="hidden-xs">
+                        <img src="img/aronija_740x70.png?6028">
+                    </a>
+                </div>
                 <div class="product-wrapper col-xs-12">
                     <div class="product-header-title visible-xs col-xs-12">
                         <h1 class="product-title">Aronija Original matični sok</h1>
@@ -114,7 +119,7 @@
                                 <h2 class="product-vendor"><a title="Aronia original" href="/">Aronia original</a></h2>
                             </div>
 
-                            <form class="product-actions col-sm-5 no-padding text-right" method="post" action="/cart/add">
+                            <div class="product-actions col-sm-5 no-padding text-right">
                                 <div class="options">
                                     <div class="variants-wrapper">
                                         <div class="selector-wrapper">
@@ -131,10 +136,15 @@
                                     <div class="purchase">
                                         <div>Cijena:</div>
                                         <p class="price"><strong>42,90 kn</strong></p>
+                                        <span class="compare-at-price">prije: <del>199,00 kn</del></span>
                                         <button type="submit" id="add-to-cart" name="add" class="btn btn-add-to-cart">Dodaj u košaricu</button>
                                     </div>
                                 </div> <!-- end .options -->
-                            </form>
+                                <div class="sold-out col-xs-12 no-padding">
+                                    <h2><strong>Rasprodano!</strong></h2>
+                                    <small>(treba prikazati samo kad je proizvod rasprodan i sakriti formu iznad)</small>
+                                </div>
+                            </div>
                         </div> <!-- end .product-header -->
 
                         <div class="vendor-message product-text-box">
@@ -290,9 +300,33 @@
                             </div>
                         </div>
 
+                        <div class="product-labels">
+                            <div class="product-label label-bio">
+                                <span>BIO</span>
+                            </div>
+                            <div class="product-label label-eco">
+                                <span>ECO</span>
+                            </div>
+                            <div class="product-label label-gluten-free">
+                                <span>BEZ GLUTENA</span>
+                            </div>
+                            <div class="product-label label-sugar-free">
+                                <span>BEZ DODANOG ŠEĆERA</span>
+                            </div>
+                            <div class="product-label label-vegan">
+                                <span>VEGANSKI PROIZVOD</span>
+                            </div>
+                            <div class="product-label label-no-artificial-coloring">
+                                <span>BEZ UMJETNIH BOJA</span>
+                            </div>
+                            <div class="product-label label-no-perfume">
+                                <span>BEZ PARFEMA</span>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="tabs-wrapper col-xs-12 no-padding">
+                    <div class="tabs-wrapper col-xs-12 no-padding hidden-xs">
                         <ul id="product-tabs" class="nav nav-tabs" role="tablist">
                             <li class="active"><a href="#tab-1">Opis</a></li>
                             <li><a href="#tab-2">Djelovanje i upotreba</a></li>
@@ -334,6 +368,77 @@
                             </div>
                         </div>
                     </div> <!-- end .tabs-wrapper -->
+
+                    <div class="accordion-wrapper panel-group col-xs-12 no-padding visible-xs" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                        Opis
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>Najjači antioksidans na tržištu! Bez konzervansa!</p>
+                                    <p>100% čisti matični sok Aronije iz ekološkog uzgoja dobiven je procesom hladnog prešanja pažljivo odabranih bobica Aronije što ga čini apsolutno jedinstvenim proizvodom na tržištu. Visoko kvalitetna sirovina kao i pažljiva obrada jamči čistoću i prepoznatljivost okusa Aronija soka.</p>
+                                    <p>Aronija je bobičasto voće koje liči na borovnicu i nešto je oporijeg okusa.</p>
+                                    <p>Proizvod posjeduje oznaku DE-034-Eko Control čime jamči provjerenu kvalitetu kao i zadovoljenje visokih kriterija i standarda eko proizvodnje. Ne sadrži konzervanse, umjetne boje, okuse i mirise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                        Djelovanje i upotreba
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Aronija služi detoksikaciji organizma smanjenjem utjecaja slobodnih radikala na tijelo. Smanjenje utjecaja slobodnih radikala može povoljno djelovati na zaštitu od malignih oboljenja.</p>
+                                    <p>Aronija zvog svojeg sastava poboljno djeluje na cirkulaciju, ublažava glavobolje, povišen krvni tlak, probavni sustav te podiže imunitet i kazuje da sprječava razvoj virusnih i bakterijskih infekcija.</p>
+                                    <p>Smiruje želudac i bolove, dobra je za sve koji pate od čireva. U litarturi se njen blagotvoran utjecaj na rad zuči i jetre.</p>
+                                    <p>Preporučuje se konzumacija samo 0,5 decilitara ovog soka dnevno.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                        Sastav
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Aronija u svojim plodovima sadrži veliku koncentraciju antioksidansa (tanine, biofenole, flavonoide, antocijanine, katehine)</p>
+                                    <p>Sadrži vitamine C, A, E, B2, B6, B9, i vrlo rijetki vitamin P.</p>
+                                    <p>Ona također sadrži i minerale, posebno željezo, kalcij, kalij, mangan, fosfor, jod i molibden</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                        Ostalo
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Preporučene dnevne doze ne smiju se prekoračiti. Dodatak prehrani nije nadomjestak ili zamjena uravnoteženoj prehrani.</p>
+                                    <p>Uzimanje pojedinih dodataka prehrani kod nekih osoba može uzrokovati alergijske reakcije. Prije uzimanja proizvoda dobro proučite njegov sastav. Ukoliko niste sigurni smijete li uzimati neki proizvod savjetujte se s liječnikom ili ljekarnikom prije uzimanja. U slučaju alergijske reakcije prekinite s uzimanjem proizvoda i odmah se obratite liječniku.</p>
+                                    <p>Ukoliko uz dodatak prehrani koristite i neki lijek, prije uporabe ovog proizvoda pažljivo pročitate uputu o lijeku. Za obavijesti o indikacijama, mjerama opreza i nuspojavama upitajte svog liječnika ili ljekarnika.</p>
+                                    <p>Za svako dijagnosticiranje i liječenje bolesti posjetite Vašeg liječnika. Vitamini, minerali i drugi dodaci prehrani ne mogu zamijeniti propisani lijek bez izričite suglasnosti i preporuke liječnika.</p>
+                                    <p>Ova web stranica ljekarnik.hr nije namijenjena dijagnosticiranju niti propisivanju terapije i stoga ne preuzima nikakvu odgovornost.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end accordion wrapper -->
                 </div>
 
                 <div class="col-xs-12 no-padding related-products">
@@ -359,7 +464,6 @@
                     </div> <!-- end .product-wrapper -->
                     <div class="product col-md-3 col-sm-6">
                         <div class="product-inner">
-                            
                             <div class="product-image">
                                 <a title="Aronija Original matični sok 0,5 L" href="/product.html" class="product-photo">
                                     <img class="img-responsive" alt="Aronija Original matični sok 0,5 L" src="img/ljekarnik_hr_aronia_original_maticni_sok_0_5L_500px_medium.jpg">
