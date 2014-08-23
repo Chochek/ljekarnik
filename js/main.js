@@ -89,6 +89,32 @@ $(function() {
         $('#review_rating').val($('.review-rate-product i').index(this) + 1);
     });
 
+    function setIconOffset() {
+        var bundleImageHeight = 0;
+        $('.products-bundle').find('.product-image').each(function(index, image) {
+            if ($(image).height() > bundleImageHeight) {
+                bundleImageHeight= $(image).height();
+            }
+        });
+        if ($(window).width() < 768) {
+            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
+                $(icon).css({top: (bundleImageHeight + 22) * (index + 1)});
+            });
+        }
+        else {
+            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
+                $(icon).css({top: bundleImageHeight / 2 + 10});
+            });
+            $('span.equals').css({top: bundleImageHeight / 2 + 10});
+            $('button.add-set').css({top: bundleImageHeight / 2 + 10});
+        }
+    }
+    setIconOffset();
+
+    $(window).resize(function() {
+        setIconOffset()
+    });
+
 
     //
     // Checkout pages

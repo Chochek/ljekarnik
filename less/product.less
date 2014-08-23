@@ -266,6 +266,89 @@
   }
 }
 
+.products-bundle {
+  margin: 20px 0;
+  .row {
+    position: relative;
+  }
+  .bundle-title {
+    h2 {
+      border-bottom: 1px solid #d7d7d7;
+      padding-bottom: 5px;
+      span {
+        color: @purple;
+      }
+    }
+  }
+  .bundle-product-name {
+    margin: 10px 0 5px;
+  }
+  .product-wrapper {
+    padding: 10px;
+    .product-image {
+      border: 1px solid #d7d7d7;
+      background: white;
+      text-align: center;
+      img {
+        display: inline;
+      }
+    }
+  }
+  .fa-plus {
+    background: @gray-light;
+    border-radius: 50%;
+    color: white;
+    float: left;
+    font-size: 35px;
+    height: 50px;
+    left: 25%;
+    line-height: 52px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 115px;
+    width: 50px;
+    z-index: 100;
+    .translate(-50%, -50%);
+    &:nth-child(4) {
+      left: 50%;
+    }
+  }
+  span.equals {
+    color: @gray-light;
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 52px;
+    position: absolute;
+    top: 115px;
+    left: 75%;
+    transform: translate(0px, -65%);
+  }
+  .add-set {
+    width: 175px;
+    position: absolute;
+    right: 0;
+    top: 115px;
+    white-space: normal;
+    .translate(0px, -50%);
+    .btn-text {
+      border-bottom: 1px solid;
+      display: inline-block;
+      margin-bottom: 2px;
+      padding-bottom: 5px;
+    }
+  }
+  .bundle-product-price.regular {
+    text-decoration: line-through;
+    float: left;
+  }
+  .bundle-product-price.sale {
+    color: @purple;
+    float: left;
+    margin-left: 10px;
+  }
+}
+
 @media @extra-small {
   #active-wrapper {
     border: none !important;
@@ -276,6 +359,37 @@
   .product-label {
     width: 33.33%;
     padding: 0 0 33.33%;
+  }
+  .products-bundle {
+    .fa-plus {
+      left: 50%;
+    }
+    span.equals {
+      display: none;
+    }
+    button.add-set {
+      position: relative;
+      max-width: 100%;
+      left: 50%;
+      right: auto;
+      top: 0;
+      .translate(-50%, 0);
+    }
+  }
+  .bundle-product-prices {
+    background: white;
+    border: none;
+    border-radius: 0 0 6px;
+    left: 11px;
+    opacity: 0.8;
+    overflow: hidden;
+    padding: 5px 15px;
+    position: absolute;
+    top: 11px;
+    .sale {
+      margin-left: 0 !important;
+      clear: left;
+    }
   }
 }
 
@@ -303,6 +417,9 @@
       font-size: 11px;
     }
   }
+  .products-bundle .add-set {
+    width: 135px;
+  }
 }
 
 @media @small {
@@ -328,5 +445,8 @@
     &.label-no-perfume {
       font-size: 11px;
     }
+  }
+  .products-bundle .add-set {
+    width: 120px;
   }
 }
