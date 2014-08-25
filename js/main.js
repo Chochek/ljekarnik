@@ -57,64 +57,6 @@ $(function() {
     });
 
 
-    //
-    // Product page
-    // ------------------------------
-
-    // toggle product reviews on the product page
-    $('.product-rating-wrapper .star-rating-caption').on('click', function(e) {
-        e.preventDefault();
-        $('.product-reviews').toggle();
-    });
-
-    // toggle review form on the product page
-    $('.new-review').on('click', function(e) {
-        e.preventDefault();
-        $('.review-form').toggle();
-    });
-
-    // Star rating when adding a new review on the product page
-    $('.review-rate-product i').on('click', function(e, elem) {
-        e.preventDefault();
-        var starIndex = this;
-        $.each($('.review-rate-product').children('i'), function(index, value) {
-            if (index <= $('.review-rate-product i').index(starIndex)) {
-                $(this).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
-            }
-            else {
-                $(this).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
-            }
-        });
-
-        $('#review_rating').val($('.review-rate-product i').index(this) + 1);
-    });
-
-    function setIconOffset() {
-        var bundleImageHeight = 0;
-        $('.products-bundle').find('.product-image').each(function(index, image) {
-            if ($(image).height() > bundleImageHeight) {
-                bundleImageHeight= $(image).height();
-            }
-        });
-        if ($(window).width() < 768) {
-            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
-                $(icon).css({top: (bundleImageHeight + 22) * (index + 1)});
-            });
-        }
-        else {
-            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
-                $(icon).css({top: bundleImageHeight / 2 + 10});
-            });
-            $('span.equals').css({top: bundleImageHeight / 2 + 10});
-            $('button.add-set').css({top: bundleImageHeight / 2 + 10});
-        }
-    }
-    setIconOffset();
-
-    $(window).resize(function() {
-        setIconOffset()
-    });
-
 
     //
     // Checkout pages
@@ -125,22 +67,40 @@ $(function() {
         $('.user-notes-text').toggle();
     });
 
+    $('.checkout-address .customer-address button').on('click', function(e) {
+        e.preventDefault();
+        $('.new-customer-address').toggle();
+    });
+
     $('.checkout-address .checkbox input').on('click', function() {
         var checkbox = $(this);
         if (checkbox.is(':checked')) {
-            $('.checkout-notes').children('.panel').hide().siblings('.alt-address').show();
+            $('.checkout-address .company-fields').show();
         }
         else {
-            $('.checkout-notes').children('.panel').show().siblings('.alt-address').hide();
+            $('.checkout-address .company-fields').hide();
         }
     });
 
     $('.payment-method .option1').on('click', function(e) {
         $('.credit-card-data').show();
+        $('.home-delivery').hide();
+        $('.direct-deposit').hide();
+        $('.checkout-actions .btn-cart').text('Nastavi na plaćanje kreditnom karticom');
     });
 
-    $('.payment-method .option2, payment-method .option3').on('click', function(e) {
+    $('.payment-method .option2').on('click', function(e) {
         $('.credit-card-data').hide();
+        $('.home-delivery').show();
+        $('.direct-deposit').hide();
+        $('.checkout-actions .btn-cart').text('Nastavi na sljedeći korak');
+    });
+
+    $('.payment-method .option3').on('click', function(e) {
+        $('.credit-card-data').hide();
+        $('.home-delivery').hide();
+        $('.direct-deposit').show();
+        $('.checkout-actions .btn-cart').text('Nastavi na sljedeći korak');
     });
 
 

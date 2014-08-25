@@ -65,6 +65,14 @@
             </div>
         </header>
 
+        <div class="alert alert-success alert-item-added alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+            </button>
+            <strong>Proizvod je dodan u košaricu!</strong>
+            <a href="/checkout.html">Pregled i dovršetak narudžbe »</a>
+        </div>
+
         <div class="row main-content">
             <div class="col-md-10">
                 <div class="product-banner">
@@ -142,13 +150,56 @@
                                 </div> <!-- end .options -->
                                 <div class="sold-out col-xs-12 no-padding">
                                     <h2><strong>Rasprodano!</strong></h2>
-                                    <small>(treba prikazati samo kad je proizvod rasprodan i sakriti formu iznad)</small>
+
+                                    <!-- OVO IZBRISATI!!!! -->
+                                    <small style="color: red">(treba prikazati samo kad je proizvod rasprodan i sakriti formu iznad)</small>
                                 </div>
+                            </div>
+
+                            <div class="delivery pull-right">
+                                <p><i class="fa fa-truck"></i>Rok dostave: <strong>2 dana</strong>
+                            </div>
+
+                            <div class="installment-payment product-text-box col-xs-12">
+                                <p><i class="fa fa-credit-card"></i>Plati ovaj proizvod do X rata, <strong>već od Y kuna mjesečno</strong></p>
                             </div>
                         </div> <!-- end .product-header -->
 
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="product-quantity">Komada</th>
+                                        <th class="product-price">Cijena</th>
+                                        <th class="product-discount">Popust</th>
+                                        <th class="product-actions"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-quantity">Kupi 1</td>
+                                        <td class="product-price">121,90 kn po komadu</td>
+                                        <td class="product-discount">0%</td>
+                                        <td class="product-actions"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Dodaj u košaricu"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-quantity">Kupi 2</td>
+                                        <td class="product-price">115,81 kn po komadu</td>
+                                        <td class="product-discount">5%</td>
+                                        <td class="product-actions"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Dodaj u košaricu"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-quantity">Kupi 3</td>
+                                        <td class="product-price">109,71 kn po komadu</td>
+                                        <td class="product-discount">10%</td>
+                                        <td class="product-actions"><i class="fa fa-plus-circle" data-toggle="tooltip" data-placement="top" title="Dodaj u košaricu"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                         <div class="vendor-message product-text-box">
-                                <p>AKCIJA 2+1 GRATIS Naruči bilo koja 2 Aronia original proizvoda i šaljemo ti namaz od aronije gratis. Namaz nije potrebno dodatno naručivati - šaljemo ga automatski uz sve narudžbe s 2 Aronia original proizvoda, sve do isteka zaliha.</p>
+                            <p>AKCIJA 2+1 GRATIS Naruči bilo koja 2 Aronia original proizvoda i šaljemo ti namaz od aronije gratis. Namaz nije potrebno dodatno naručivati - šaljemo ga automatski uz sve narudžbe s 2 Aronia original proizvoda, sve do isteka zaliha.</p>
                         </div>
 
                         <div class="short-description product-text-box">
@@ -321,6 +372,9 @@
                             </div>
                             <div class="product-label label-no-perfume">
                                 <span>BEZ PARFEMA</span>
+                            </div>
+                            <div class="product-label label-no-preservatives">
+                                <span>BEZ <small>KONZERVANSA</small></span>
                             </div>
                         </div>
                     </div>
@@ -700,6 +754,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
     <script src="js/enhance-gallery.js"></script>
     <script src="js/animate-shadow.min.js"></script>
 

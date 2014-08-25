@@ -27,11 +27,15 @@
   }
 }
 .checkout-page {
+  .page-wrapper .btn-cart {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &.step-2, &.step-3, &.step-4 {
+    padding-top: 100px;
+  }
   .table-responsive {
-    border: 1px solid @border-color;
-    border-radius: 4px;
     table {
-      margin-bottom: 0;
       td {
         vertical-align: middle !important;
       }
@@ -61,6 +65,10 @@
     .product-remove {
       width: 80px;
     }
+    tfoot .product-amount {
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
   .checkout-actions {
     margin-top: 20px;
@@ -73,9 +81,17 @@
     }
   }
 
+  &.step-2 .customer-email {
+    margin-top: 10px;
+  }
+
   &.step-2, &.step-3 {
     .cart-area, .header-search-placeholder {
       display: none;
+    }
+    .sidebar {
+      position: fixed;
+      right: 20px;
     }
     .page-wrapper {
       background: none;
@@ -83,15 +99,48 @@
       .new-order > div {
         background: @gray-lighter;
         border-radius: 4px;
-        overflow: hidden;
         padding: 15px;
-        margin-bottom: 20px;
+        margin: 0 0 20px;
       }
     }
     .addresses {
       .checkout-address {
-        padding: 0 15px 0 0;
-        border-right: 1px solid @border-color;
+        padding: 0;
+        .customer-address {
+          p {
+            margin-bottom: 0;
+          }
+          button {
+            margin: 15px 0 20px;
+          }
+        }
+        .new-customer-address {
+          display: none;
+          > .form-group {
+            padding: 0 8px;
+            &:nth-child(2n) {
+              padding-left: 0;
+            }
+            &:nth-child(2n+1) {
+              padding-right: 0;
+            }
+          }
+          .company-fields {
+            display: none;
+            .form-group{
+              padding: 0 8px;
+              &:nth-child(2n+1) {
+                padding-left: 0;
+              }
+              &:nth-child(2n) {
+                padding-right: 0;
+              }
+            }
+          }
+          .checkbox label input {
+            margin-top: 2px;
+          }
+        }
       }
       .checkout-notes {
         padding: 0 0 0 15px;
@@ -132,7 +181,7 @@
     .btn-group {
       margin: 10px 0 20px;
     }
-    .credit-card-data {
+    .credit-card-data > div {
       > .first-name {
         padding-right: 5px;
       }
@@ -146,11 +195,24 @@
         display: block;
       }
     }
+    .home-delivery, .direct-deposit {
+      display: none;
+    }
   }
 }
 
 @media @extra-small {
+  .checkout-page.step-2 {
+    .new-customer-address .form-group, .credit-card-data .form-group {
+      padding: 0 !important;
+    }
+  }
   .checkout-page .payment-method {
+    label.btn.btn-primary {
+      font-size: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
     .credit-card-data {
       > .first-name {
         padding-right: 0;

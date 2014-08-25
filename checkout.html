@@ -65,8 +65,13 @@
         </header>
 
         <div class="row main-content">
-            <div class="checkout-process-status step-1">
+            <div class="checkout-process-status step-1 hidden-xs">
                 <div><img src="img/checkout-process-status.png" class="img-responsive"></div>
+            </div>
+            <div class="customer-notifications col-xs-12">
+                <div class="alert alert-info">
+                    <p>Povećajte količinu proizvoda tako da iznos bude veći od 150 kuna i dostava je BESPLATNA.</p>
+                </div>
             </div>
             <div class="col-md-12">
                 <div class="page-wrapper">
@@ -117,7 +122,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                                <thead>
+                                <tfoot>
                                     <tr>
                                         <td colspan="3"></td>
                                         <td class="product-quantity">
@@ -126,7 +131,7 @@
                                         <td class="product-amount">477,60 kn</td>
                                         <td class="product-remove"></td>
                                     </tr>
-                                </thead>
+                                </tfoot>
                             </table>
                         </div>
                         <div class="checkout-actions">

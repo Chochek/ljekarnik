@@ -68,114 +68,164 @@
             <div class="col-md-10">
                 <div class="page-wrapper">
                     <div class="page-content">
-                        <div class="checkout-process-status step-2">
+                        <div class="checkout-process-status step-2 hidden-xs">
                             <div><img src="img/checkout-process-status.png" class="img-responsive"></div>
                         </div>
                         <div class="new-order">
-                            <div class="email">
+                            <div class="email row">
                                 <label class="checkout-section-title" for="order-email">Vaš email</label>
-                                <h4 class="active-customer">ime.prezime@gmail.com</h4>
-                                <span class="sign-in-message">Nisi Ime? <a class="customer-login-link" href="/login.html">Prijavi se kao drugi korisnik</a></span>
-                            </div>
-                            <div class="addresses">
-                                <div class="col-sm-6 checkout-address">
-                                    <label class="checkout-section-title">Adresa kupca</label>
-                                    <div class="form-group">
-                                        <label for="first-name">Ime</label>
-                                        <input class="form-control" id="first-name" name="first_name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="last-name">Prezime</label>
-                                        <input class="form-control" id="last-name" name="last_name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="company">Tvrtka</label>
-                                        <input class="form-control" id="company" name="company">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address">Adresa</label>
-                                        <input class="form-control" id="address" name="address">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="address2">Adresa 2</label>
-                                        <input class="form-control" id="address2" name="address2">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="city">Mjesto</label>
-                                        <input class="form-control" id="city" name="city">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="zip-code">Poštanski broj</label>
-                                        <input class="form-control" id="zip-code" name="zip_code">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="country">Država</label>
-                                        <select id="country" name="country">
-                                            <option value="Croatia">Croatia</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="phone">Telefon</label>
-                                        <input class="form-control" id="phone" name="phone">
-                                    </div>
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Dostava proizvoda na adresu kupca
-                                        </label>
-                                    </div>
+                                <div class="customer-email form-group col-xs-12 col-sm-6 no-padding">
+                                    <input type="email" class="form-control" value="ime.prezime@gmail.com">
+                                    <span class="sign-in-message">Nisi Ime? <a class="customer-login-link" href="/login.html">Prijavi se kao drugi korisnik</a></span>
                                 </div>
-                                <div class="col-sm-6 checkout-notes">
-                                    <label class="checkout-section-title">Alternativna adresa za dostavu</label>
-                                    <div class="panel">
-                                        <p>Proizvodi se šalju na adresu kupca. Ukoliko želite da se proizvodi pošalju na neku drugu, alternativnu adresu za dostavu, u lijevom stupcu odznačite kvačicu s nazivom "Dostava proizvoda na adresu kupca" i moći ćete unijeti drugu, alternativnu adresu.</p>
+                            </div>
+                            <div class="addresses row">
+                                <div class="col-sm-12 checkout-address">
+                                    <label class="checkout-section-title">Adresa kupca</label>
+                                    <div class="col-xs-12 no-padding customer-address">
+                                        <p>Ime Prezime</p>
+                                        <p>+3851234567890</p>
+                                        <p>Ime Ulice 42</p>
+                                        <p>10000 Zagreb, Hrvatska</p>
+
+                                        <button class="btn btn-primary">Alternativna adresa</button>
                                     </div>
-                                    <div class="alt-address">
-                                        <div class="form-group">
+                                    <div class="new-customer-address">
+                                        <label class="checkout-section-title">Alternativna adresa za dostavu</label>
+                                        <div class="form-group col-sm-6">
                                             <label for="first-name">Ime</label>
                                             <input class="form-control" id="first-name" name="first_name">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="last-name">Prezime</label>
                                             <input class="form-control" id="last-name" name="last_name">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="company">Tvrtka</label>
-                                            <input class="form-control" id="company" name="company">
-                                        </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="address">Adresa</label>
                                             <input class="form-control" id="address" name="address">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="address2">Adresa 2</label>
                                             <input class="form-control" id="address2" name="address2">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="city">Mjesto</label>
                                             <input class="form-control" id="city" name="city">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="zip-code">Poštanski broj</label>
                                             <input class="form-control" id="zip-code" name="zip_code">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="country">Država</label>
-                                            <select id="country" name="country">
-                                                <option value="Croatia">Croatia</option>
-                                            </select>
+                                            <div class="dropdown dropdown-form">
+                                                <button class="btn dropdown-toggle" type="button" id="country" data-toggle="dropdown">
+                                                    <span class="selection">Hrvatska</span>
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu" aria-labelledby="country">
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Hrvatska</a></li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Druga država</a></li>
+                                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Treća država</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-sm-6">
                                             <label for="phone">Telefon</label>
                                             <input class="form-control" id="phone" name="phone">
                                         </div>
+                                        <div class="checkbox col-xs-12 no-padding">
+                                            <label>
+                                                <input type="checkbox"> Želim isporuku na poslovnu adresu
+                                            </label>
+                                        </div>
+                                        <div class="company-fields col-xs-12 no-padding">
+                                            <div class="form-group col-sm-6">
+                                                <label for="company-name">Tvrtka</label>
+                                                <input class="form-control" id="company-name" name="company_name">
+                                            </div>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="delivery-method row">
+                                <label class="checkout-section-title" for="order-email">Način dostave</label>
+                                <p>Molimo odaberite način dostave</p>
+                                <div class="form-group col-sm-6 no-padding">
+                                    <div class="dropdown dropdown-form">
+                                        <button data-toggle="dropdown" id="country" type="button" class="btn dropdown-toggle">
+                                            <span class="selection">Overseas Express dostava - BESPLATNO</span>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul aria-labelledby="country" role="menu" class="dropdown-menu">
+                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Overseas Express dostava - BESPLATNO </a></li>
+                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Drugi način dostave</a></li>
+                                            <li role="presentation"><a href="#" tabindex="-1" role="menuitem">Treći način dostave</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payment-method row">
+                                <label class="checkout-section-title" for="order-email">Kako biste željeli platiti narudžbu?</label>
+                                <p>Sve transakcije su sigurne i enkriptirane, a podaci o Vašoj kreditnoj kartici se ne pohranjuju. Za više podataka pročitajte Pravila privatnosti</p>
+
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary option1 active">
+                                        <input type="radio" name="options" id="option1" checked> Karticom
+                                    </label>
+                                    <label class="btn btn-primary option2">
+                                        <input type="radio" name="options" id="option2"> Pouzećem
+                                    </label>
+                                    <label class="btn btn-primary option3">
+                                        <input type="radio" name="options" id="option3"> Uplatom na bankovni račun
+                                    </label>
+                                </div>
+                                <div class="clearfix"></div>
+
+                                <div class="credit-card-data col-xs-12 no-padding">
+                                    <div class="alert alert-info">Plaćanje karticom znači to i to.</div>
+                                    <div class="col-sm-6 no-padding">
+                                        <div class="form-group col-md-6 no-padding first-name">
+                                            <label for="first-name">Ime</label>
+                                            <input class="form-control" id="first-name" name="first_name">
+                                        </div>
+                                        <div class="form-group col-md-6 no-padding last-name">
+                                            <label for="last-name">Prezime</label>
+                                            <input class="form-control" id="last-name" name="last_name">
+                                        </div>
+                                        <div class="form-group col-md-12 no-padding">
+                                            <label for="cc-num">Broj kreditne kartice</label>
+                                            <input class="form-control" id="cc-num" name="cc_num">
+                                        </div>
+                                        <div class="form-group col-md-12 no-padding cc-date">
+                                            <label for="cc-valid">Vrijedi do</label>
+                                            <div class="clearfix"></div>
+                                            <select class="month">
+                                                <option value="1">1 - Siječanj</option>
+                                            </select>
+                                            <select class="year">
+                                                <option value="2014">2014</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-sm-4 no-padding cc-code">
+                                            <label for="cc-code">Sigurnosni kod kartice</label>
+                                            <input class="form-control" id="cc-code" name="cc_code">
+                                            <small>Što je ovo?</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="home-delivery col-xs-12 no-padding">
+                                    <div class="alert alert-info">Plaćanje pouzećem znači plaćanje dostavljaču u gotovini prilikom isporuke.</div>
+                                </div>
+                                <div class="direct-deposit col-xs-12 no-padding">
+                                    <div class="alert alert-info">Plaćanje na bankovni račun znači to i to.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="checkout-actions">
                         <div class="">
-                            <a role="button" href="/checkout-3.html" class="btn btn-cart">Nastavi na sljedeći korak</a>
+                            <a role="button" href="/checkout-3.html" class="btn btn-cart">Nastavi na plaćanje kreditnom karticom</a>
                             <small id="cancel-purchase">ili <a href="/">povratak u web trgovinu</a></small>
                         </div>
                     </div>

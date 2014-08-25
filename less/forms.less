@@ -1,0 +1,35 @@
+.dropdown-form {
+  button {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    text-align: left;
+    width: 100%;
+    padding-left: 0;
+    .selection {
+      display: block;
+      width: 100%;
+      padding-right: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 12px;
+    }
+    .caret {
+      position: absolute;
+      right: 10px;
+      top: 16px;
+    }
+  }
+  .dropdown-menu {
+    width: 100%;
+    li a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &.open button, button:focus {
+    border-color: @purple;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+  }
+}
