@@ -11,7 +11,7 @@ body {
 a:not(.btn):not(.social-icon),
 a:not(.btn):not(.social-icon):visited {
   outline: 0 !important;
-  color: @gray-darker;
+  color: @gray-darker !important;
   &:hover {
     color: @green !important;
     text-decoration: none;
@@ -143,25 +143,31 @@ header {
 .navbar-custom {
   background: white;
   border-top: 4px solid @gray-lighter;
+  border-bottom: none;
   height: 75px;
   box-shadow: 0 0 3px white;
+  .container {
+    position: relative;
+  }
 }
 
 .logo-container {
-  padding: 0 20px;
-  margin: 0 0 20px;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline-block;
 }
 
 .cart-area {
   position: absolute;
   right: 15px;
   top: -3px;
-  padding: 0 10px;
+  padding: 0 10px !important;
   background: #eeeeee;
   border-radius: 0 0 6px 6px;
   ul {
     list-style: none;
     padding: 0;
+    margin-right: 0 !important;
     li {
       border-right: 1px solid #cccccc;
       float: left;
@@ -175,9 +181,17 @@ header {
         padding: 0;
       }
       a {
-        color: @gray;
-        &.btn-cart, &.btn-cart:hover  {
+        color: @gray !important;
+        padding: 0;
+        line-height: inherit;
+        &.btn-cart {
           color: white !important;
+          padding: 6px 12px;
+        }
+        &.btn-cart:hover {
+          color: white !important;
+          padding: 6px 12px;
+          background-color: #6db038;
         }
       }
     }
@@ -186,7 +200,7 @@ header {
 
 .header-search-placeholder {
   padding-right: 55px;
-  padding-left: 20px;
+  padding-left: 15px;
   margin-top: 100px;
   #top-search-input {
     position: relative;
@@ -355,6 +369,34 @@ footer {
     margin-bottom: 50px;
     p {
       margin-bottom: 5px;
+    }
+  }
+}
+
+@media @extra-small {
+  .logo-container {
+    padding: 0 15px;
+  }
+  .cart-area {
+    position: relative;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    padding: 0 !important;
+    ul {
+      margin-left: 0 !important;
+      li {
+        border-right: none;
+        float: none;
+        margin: 0;
+        padding: 5px 15px;
+        &:not(.checkout-link):hover {
+          background-color: #e7e7e7;
+        }
+        &.checkout-link {
+          padding: 0 15px;
+        }
+      }
     }
   }
 }

@@ -22,16 +22,24 @@
 
     <div class="container">
         <header class="row">
-            <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation">
                 <div class="container">
-                    <h1 class="logo-container">
-                        <a title="Naslovna" href="/">
-                            <img alt="Ljekarnik.hr" src="img/logo.png">
-                        </a>
-                    </h1>
-
-                    <div class="cart-area">
-                        <ul>
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <h1 class="logo-container">
+                            <a title="Naslovna" href="/">
+                                <img alt="Ljekarnik.hr" src="img/logo.png">
+                            </a>
+                        </h1>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ljekarnik-cart">
+                        <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse cart-area" id="ljekarnik-cart">
+                        <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a class="customer-login-link" href="/login.html">Prijavite se</a>
                             </li>
@@ -48,7 +56,7 @@
                                 <a class="btn btn-cart no-items" href="/checkout.html">Naručivanje</a>
                             </li>
                         </ul>
-                    </div>
+                    </div><!-- /.navbar-collapse -->
                 </div>
             </nav>
 
@@ -81,6 +89,7 @@
                     </a>
                 </div>
                 <div class="product-wrapper col-xs-12">
+                    <div class="alert ljekarnik-count-down"></div>
                     <div class="product-header-title visible-xs col-xs-12">
                         <h1 class="product-title">Aronija Original matični sok</h1>
                         <h2 class="product-vendor"><a title="Aronia original" href="/">Aronia original</a></h2>
@@ -163,6 +172,12 @@
                             <div class="installment-payment product-text-box col-xs-12">
                                 <p><i class="fa fa-credit-card"></i>Plati ovaj proizvod do X rata, <strong>već od Y kuna mjesečno</strong></p>
                             </div>
+
+                            <!-- DATUM ZAVRŠETKA AKCIJE -->
+                            <div class="sale-ends hidden">
+                                August 31, 2014 23:59:00
+                            </div>
+
                         </div> <!-- end .product-header -->
 
                         <div class="table-responsive">
@@ -756,6 +771,7 @@
     <script src="js/main.js"></script>
     <script src="js/product.js"></script>
     <script src="js/enhance-gallery.js"></script>
+    <script src="js/countdown.js"></script>
     <script src="js/animate-shadow.min.js"></script>
 
     <script>

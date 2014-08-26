@@ -175,7 +175,7 @@ body {
 a:not(.btn):not(.social-icon),
 a:not(.btn):not(.social-icon):visited {
   outline: 0 !important;
-  color: #333333;
+  color: #333333 !important;
 }
 a:not(.btn):not(.social-icon):hover,
 a:not(.btn):not(.social-icon):visited:hover {
@@ -291,24 +291,30 @@ header {
 .navbar-custom {
   background: white;
   border-top: 4px solid #f6f6f6;
+  border-bottom: none;
   height: 75px;
   box-shadow: 0 0 3px white;
 }
+.navbar-custom .container {
+  position: relative;
+}
 .logo-container {
-  padding: 0 20px;
-  margin: 0 0 20px;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline-block;
 }
 .cart-area {
   position: absolute;
   right: 15px;
   top: -3px;
-  padding: 0 10px;
+  padding: 0 10px !important;
   background: #eeeeee;
   border-radius: 0 0 6px 6px;
 }
 .cart-area ul {
   list-style: none;
   padding: 0;
+  margin-right: 0 !important;
 }
 .cart-area ul li {
   border-right: 1px solid #cccccc;
@@ -324,15 +330,22 @@ header {
   padding: 0;
 }
 .cart-area ul li a {
-  color: #666666;
+  color: #666666 !important;
+  padding: 0;
+  line-height: inherit;
 }
-.cart-area ul li a.btn-cart,
+.cart-area ul li a.btn-cart {
+  color: white !important;
+  padding: 6px 12px;
+}
 .cart-area ul li a.btn-cart:hover {
   color: white !important;
+  padding: 6px 12px;
+  background-color: #6db038;
 }
 .header-search-placeholder {
   padding-right: 55px;
-  padding-left: 20px;
+  padding-left: 15px;
   margin-top: 100px;
 }
 .header-search-placeholder #top-search-input {
@@ -495,6 +508,33 @@ footer .footer-payment-methods {
 footer .footer-payment-methods p {
   margin-bottom: 5px;
 }
+@media (max-width: 767px) {
+  .logo-container {
+    padding: 0 15px;
+  }
+  .cart-area {
+    position: relative;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    padding: 0 !important;
+  }
+  .cart-area ul {
+    margin-left: 0 !important;
+  }
+  .cart-area ul li {
+    border-right: none;
+    float: none;
+    margin: 0;
+    padding: 5px 15px;
+  }
+  .cart-area ul li:not(.checkout-link):hover {
+    background-color: #e7e7e7;
+  }
+  .cart-area ul li.checkout-link {
+    padding: 0 15px;
+  }
+}
 .featured-products {
   margin-bottom: 30px;
 }
@@ -640,6 +680,13 @@ footer .footer-payment-methods p {
   padding: 15px;
   background: #f6f6f6;
   border-radius: 4px;
+}
+.product-wrapper .ljekarnik-count-down {
+  background-color: #4088cf;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 .product-wrapper #active-wrapper {
   position: relative;
