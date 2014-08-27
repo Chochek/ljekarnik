@@ -52,9 +52,10 @@ $(function() {
             $('button.add-set').css({top: bundleImageHeight / 2 + 10});
         }
     }
+
     setIconOffset();
 
     $(window).resize(function() {
-        setIconOffset()
+        setIconOffset();
     });
 })

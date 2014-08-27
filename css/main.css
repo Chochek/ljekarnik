@@ -285,6 +285,12 @@ h3 {
 .alert-item-added a {
   text-decoration: underline;
 }
+.promotion-banner {
+  margin-bottom: 15px;
+}
+.promotion-banner img {
+  width: 100%;
+}
 header {
   position: relative;
 }
@@ -509,8 +515,28 @@ footer .footer-payment-methods p {
   margin-bottom: 5px;
 }
 @media (max-width: 767px) {
+  .navbar-custom {
+    height: auto;
+  }
+  .navbar-custom .navbar-toggle {
+    margin-bottom: -10px;
+  }
   .logo-container {
+    margin-top: -5px;
+    margin-bottom: -10px;
     padding: 0 15px;
+  }
+  .logo-container img.visible-xs {
+    display: inline !important;
+  }
+  .mobile-cart {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  .mobile-cart .num-items-in-cart {
+    margin: 5px 15px 0 0;
+    font-size: 16px;
   }
   .cart-area {
     position: relative;
@@ -533,6 +559,13 @@ footer .footer-payment-methods p {
   }
   .cart-area ul li.checkout-link {
     padding: 0 15px;
+  }
+  .header-search-placeholder {
+    margin-top: 110px;
+  }
+  .alert-item-added {
+    right: 10px;
+    left: 10px;
   }
 }
 .featured-products {
@@ -606,6 +639,7 @@ footer .footer-payment-methods p {
 .labels .label {
   display: block;
   float: left;
+  font-size: 12px;
   margin-bottom: 3px;
   margin-right: 3px;
 }
@@ -649,9 +683,6 @@ footer .footer-payment-methods p {
   margin-bottom: 30px;
   padding: 10px 15px 5px;
 }
-.collection-banner img {
-  width: 100%;
-}
 .sorting-filtering {
   margin-bottom: 20px;
 }
@@ -670,12 +701,6 @@ footer .footer-payment-methods p {
 .filters .brand-dropdown {
   display: none;
 }
-.product-banner {
-  margin-bottom: 15px;
-}
-.product-banner img {
-  width: 100%;
-}
 .product-wrapper {
   padding: 15px;
   background: #f6f6f6;
@@ -687,6 +712,9 @@ footer .footer-payment-methods p {
   color: white;
   font-weight: bold;
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
 }
 .product-wrapper #active-wrapper {
   position: relative;
@@ -747,6 +775,9 @@ footer .footer-payment-methods p {
 .product-wrapper .product-information {
   padding-right: 5px;
 }
+.product-wrapper .product-information .product-header-title {
+  margin-bottom: 0;
+}
 .product-wrapper .product-information .product-header-title .product-title {
   font-size: 24px;
 }
@@ -755,6 +786,7 @@ footer .footer-payment-methods p {
   margin-bottom: 20px;
 }
 .product-wrapper .product-header-title {
+  margin-bottom: 10px;
   padding-left: 0;
 }
 .product-wrapper .product-header-title .product-title {
@@ -767,6 +799,9 @@ footer .footer-payment-methods p {
 .product-wrapper .product-header-title .product-vendor {
   font-size: 12px;
   margin-top: 0;
+}
+.product-wrapper .product-header-title .purchase {
+  margin-top: 8px;
 }
 .product-wrapper .purchase {
   margin-top: 18px;
@@ -882,8 +917,7 @@ footer .footer-payment-methods p {
 }
 .product-wrapper .delivery .fa-truck {
   font-size: 24px;
-  margin-left: -10px;
-  left: 15px;
+  left: 16px;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -1082,9 +1116,39 @@ footer .footer-payment-methods p {
   .product-wrapper .product-information {
     padding: 0;
   }
+  .product-wrapper .ljekarnik-count-down {
+    font-size: 14px;
+  }
   .product-label {
-    width: 33.33%;
-    padding: 0 0 33.33%;
+    width: 25%;
+    padding: 0 0 25%;
+  }
+  .product-label.label-bio {
+    font-size: 20px;
+  }
+  .product-label.label-eco {
+    font-size: 20px;
+  }
+  .product-label.label-gluten-free {
+    font-size: 12px;
+  }
+  .product-label.label-sugar-free {
+    font-size: 11px;
+  }
+  .product-label.label-vegan {
+    font-size: 11px;
+  }
+  .product-label.label-no-artificial-coloring {
+    font-size: 11px;
+  }
+  .product-label.label-no-perfume {
+    font-size: 11px;
+  }
+  .product-label.label-no-preservatives {
+    font-size: 11px;
+  }
+  .product-label.label-no-preservatives small {
+    font-size: 0.7em;
   }
   .products-bundle .fa-plus {
     left: 50%;
@@ -1101,6 +1165,12 @@ footer .footer-payment-methods p {
     -webkit-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+  }
+  .products-bundle .bundle-button {
+    padding: 0 10px;
+  }
+  .products-bundle .bundle-button .btn {
+    width: 100%;
   }
   .bundle-product-prices {
     background: white;

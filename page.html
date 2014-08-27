@@ -27,15 +27,23 @@
                     <div class="navbar-header">
                         <h1 class="logo-container">
                             <a title="Naslovna" href="/">
-                                <img alt="Ljekarnik.hr" src="img/logo.png">
+                                <img alt="Ljekarnik.hr" src="img/logo.png" class="hidden-xs">
+                                <img alt="Ljekarnik.hr" src="img/logo-small.png" class="visible-xs">
                             </a>
                         </h1>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#ljekarnik-cart">
-                        <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+                        <div class="mobile-cart pull-right visible-xs">
+                            <a class="btn btn-cart no-items pull-right" href="/checkout.html">Naručivanje</a>
+                            <a class="num-items-in-cart pull-right" href="/checkout.html">
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                <span>0 proizvoda</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="collapse navbar-collapse cart-area" id="ljekarnik-cart">
                         <ul class="nav navbar-nav navbar-right">

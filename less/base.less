@@ -132,6 +132,13 @@ h3 {
   }
 }
 
+.promotion-banner {
+  margin-bottom: 15px;
+  img {
+    width: 100%;
+  }
+}
+
 //
 // Header
 // ------------------------------
@@ -374,8 +381,28 @@ footer {
 }
 
 @media @extra-small {
+  .navbar-custom {
+    height: auto;
+    .navbar-toggle {
+      margin-bottom: -10px;
+    }
+  }
   .logo-container {
+    margin-top: -5px;
+    margin-bottom: -10px;
     padding: 0 15px;
+    img.visible-xs {
+      display: inline !important;
+    }
+  }
+  .mobile-cart {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    .num-items-in-cart {
+      margin: 5px 15px 0 0;
+      font-size: 16px;
+    }
   }
   .cart-area {
     position: relative;
@@ -398,5 +425,12 @@ footer {
         }
       }
     }
+  }
+  .header-search-placeholder {
+    margin-top: 110px;
+  }
+  .alert-item-added {
+    right: 10px;
+    left: 10px;
   }
 }
