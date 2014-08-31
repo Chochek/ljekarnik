@@ -39,17 +39,9 @@ $(function() {
                 bundleImageHeight= $(image).height();
             }
         });
-        if ($(window).width() < 768) {
-            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
-                $(icon).css({top: (bundleImageHeight + 22) * (index + 1)});
-            });
-        }
-        else {
-            $('.products-bundle').find('.fa-plus').each(function(index, icon) {
-                $(icon).css({top: bundleImageHeight / 2 + 10});
-            });
-            $('span.equals').css({top: bundleImageHeight / 2 + 10});
-            $('button.add-set').css({top: bundleImageHeight / 2 + 10});
+        if ($(window).width() >= 768) {
+            $('.products-bundle').find('.equals').css({top: (bundleImageHeight / 2)});
+            $('.products-bundle').find('.add-set').css({top: (bundleImageHeight / 2)});
         }
     }
 
