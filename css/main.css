@@ -1499,27 +1499,63 @@ footer .footer-payment-methods p {
   overflow: hidden;
   position: relative;
   margin-bottom: 15px;
-}
-.checkout-process-status > div {
-  position: relative;
-  width: 100%;
-}
-.checkout-process-status img {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.checkout-process-status.step-1 {
   padding: 0 15px;
 }
-.checkout-process-status.step-2 img {
-  top: -158px;
+.checkout-process-status.step-2,
+.checkout-process-status.step-3,
+.checkout-process-status.step-4 {
+  padding: 0;
 }
-.checkout-process-status.step-3 img {
-  top: -316px;
+.checkout-process-status.step-1 .cart,
+.checkout-process-status.step-2 .address,
+.checkout-process-status.step-3 .payment,
+.checkout-process-status.step-4 .delivery {
+  background-color: #dc9821;
 }
-.checkout-process-status.step-4 img {
-  top: -474px;
+.checkout-process-status .checkout-box {
+  position: relative;
+  width: 160px;
+  height: 130px;
+  background-color: #adadad;
+  color: white;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+.checkout-process-status .checkout-box .checkout-box-title {
+  font-size: 18px;
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: 5px;
+}
+.checkout-process-status .checkout-box .checkout-box-number {
+  bottom: -10px;
+  font-size: 70px;
+  font-weight: bold;
+  left: 10px;
+  position: absolute;
+}
+.checkout-process-status .checkout-box .checkout-box-description {
+  bottom: 10px;
+  font-size: 15px;
+  max-width: 60%;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+}
+.checkout-process-status .checkout-box.delivery {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.checkout-process-status .checkout-box.delivery .fa-truck {
+  display: block;
+  font-size: 40px;
+  margin-top: 18px;
+}
+.checkout-page .page-wrapper {
+  border-radius: 0;
 }
 .checkout-page .page-wrapper .btn-cart {
   font-size: 15px;
@@ -1699,6 +1735,22 @@ footer .footer-payment-methods p {
   display: none;
 }
 @media (max-width: 767px) {
+  .checkout-process-status {
+    height: auto;
+  }
+  .checkout-process-status .checkout-box {
+    border: 2px solid;
+    height: 80px;
+    margin-right: 0;
+    width: 25%;
+    text-align: center;
+  }
+  .checkout-process-status .checkout-box .checkout-box-number {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
   .checkout-page.step-2 .new-customer-address .form-group,
   .checkout-page.step-2 .credit-card-data .form-group {
     padding: 0 !important;
