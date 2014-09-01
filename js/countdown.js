@@ -1,7 +1,6 @@
 $(function() {
     Today = new Date();
     ljekarnik_count_down_el = $('.ljekarnik-count-down');
-    console.log(ljekarnik_count_down_el.html());
 
     ljekarnik_sale_over_label = "Akcija je završila!";
     ljekarnik_sale_ends_in_label = "Akcija završava za";

@@ -1,0 +1,32 @@
+.header-search-placeholder.open {
+  input {
+    border-radius: 4px 4px 0 0;
+  }
+}
+.search-dropdown {
+  list-style: none;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #cccccc;
+  background-color: white;
+  padding: 15px 0;
+  position: absolute;
+  z-index: 1000;
+  margin-top: -1px;
+  li {
+    margin: 5px 0;
+    a {
+      display: block;
+      padding-top: 10px;
+      border-top: 1px solid #cccccc;
+    }
+    &:first-child a, &:nth-child(2) a {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  .search_result_price {
+    padding: 0 10px;
+    text-align: center;
+    width: 110px;
+  }
+}
