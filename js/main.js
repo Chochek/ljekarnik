@@ -72,13 +72,13 @@ $(function() {
         $('.new-customer-address').toggle();
     });
 
-    $('.checkout-address .checkbox input').on('click', function() {
+    $('.new-customer-address .checkbox input').on('click', function() {
         var checkbox = $(this);
         if (checkbox.is(':checked')) {
-            $('.checkout-address .company-fields').show();
+            $('.new-customer-address .company-fields').show();
         }
         else {
-            $('.checkout-address .company-fields').hide();
+            $('.new-customer-address .company-fields').hide();
         }
     });
 

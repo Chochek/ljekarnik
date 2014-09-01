@@ -349,6 +349,35 @@ header {
   padding: 6px 12px;
   background-color: #6db038;
 }
+.cart-contents {
+  font-size: 14px;
+  left: 50%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 35px;
+  width: 200px;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+.cart-contents .total {
+  border-top: 1px solid #cccccc;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.cart-contents .total span {
+  font-weight: bold !important;
+}
+.cart-contents div {
+  font-weight: bold;
+}
+.cart-contents div > span {
+  float: right;
+  font-weight: normal;
+}
+.cart-link:hover .cart-contents {
+  display: block;
+}
 .header-search-placeholder {
   padding-right: 55px;
   padding-left: 15px;
@@ -1621,6 +1650,7 @@ footer .footer-payment-methods p {
 .checkout-page.step-3 .sidebar {
   position: fixed;
   right: 20px;
+  top: 160px;
 }
 .checkout-page.step-2 .page-wrapper,
 .checkout-page.step-3 .page-wrapper {
@@ -1646,42 +1676,6 @@ footer .footer-payment-methods p {
 .checkout-page.step-3 .addresses .checkout-address .customer-address button {
   margin: 15px 0 20px;
 }
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address,
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address {
-  display: none;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address > .form-group,
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address > .form-group {
-  padding: 0 8px;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address > .form-group:nth-child(2n),
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address > .form-group:nth-child(2n) {
-  padding-left: 0;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address > .form-group:nth-child(2n+1),
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address > .form-group:nth-child(2n+1) {
-  padding-right: 0;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address .company-fields,
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address .company-fields {
-  display: none;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address .company-fields .form-group,
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address .company-fields .form-group {
-  padding: 0 8px;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address .company-fields .form-group:nth-child(2n+1),
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address .company-fields .form-group:nth-child(2n+1) {
-  padding-left: 0;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address .company-fields .form-group:nth-child(2n),
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address .company-fields .form-group:nth-child(2n) {
-  padding-right: 0;
-}
-.checkout-page.step-2 .addresses .checkout-address .new-customer-address .checkbox label input,
-.checkout-page.step-3 .addresses .checkout-address .new-customer-address .checkbox label input {
-  margin-top: 2px;
-}
 .checkout-page.step-2 .addresses .checkout-notes,
 .checkout-page.step-3 .addresses .checkout-notes {
   padding: 0 0 0 15px;
@@ -1693,6 +1687,42 @@ footer .footer-payment-methods p {
 .checkout-page.step-2 .addresses .checkout-section-title,
 .checkout-page.step-3 .addresses .checkout-section-title {
   margin-bottom: 15px;
+}
+.checkout-page.step-2 .new-customer-address,
+.checkout-page.step-3 .new-customer-address {
+  display: none;
+}
+.checkout-page.step-2 .new-customer-address > .form-group,
+.checkout-page.step-3 .new-customer-address > .form-group {
+  padding: 0 8px;
+}
+.checkout-page.step-2 .new-customer-address > .form-group:nth-child(2n),
+.checkout-page.step-3 .new-customer-address > .form-group:nth-child(2n) {
+  padding-left: 0;
+}
+.checkout-page.step-2 .new-customer-address > .form-group:nth-child(2n+1),
+.checkout-page.step-3 .new-customer-address > .form-group:nth-child(2n+1) {
+  padding-right: 0;
+}
+.checkout-page.step-2 .new-customer-address .company-fields,
+.checkout-page.step-3 .new-customer-address .company-fields {
+  display: none;
+}
+.checkout-page.step-2 .new-customer-address .company-fields .form-group,
+.checkout-page.step-3 .new-customer-address .company-fields .form-group {
+  padding: 0 8px;
+}
+.checkout-page.step-2 .new-customer-address .company-fields .form-group:nth-child(2n+1),
+.checkout-page.step-3 .new-customer-address .company-fields .form-group:nth-child(2n+1) {
+  padding-left: 0;
+}
+.checkout-page.step-2 .new-customer-address .company-fields .form-group:nth-child(2n),
+.checkout-page.step-3 .new-customer-address .company-fields .form-group:nth-child(2n) {
+  padding-right: 0;
+}
+.checkout-page.step-2 .new-customer-address .checkbox label input,
+.checkout-page.step-3 .new-customer-address .checkbox label input {
+  margin-top: 2px;
 }
 .checkout-page.step-2 .alt-address,
 .checkout-page.step-3 .alt-address {
@@ -1706,11 +1736,29 @@ footer .footer-payment-methods p {
   width: 100%;
 }
 .checkout-page .checkout-summary {
-  text-align: center;
+  text-align: left;
+  font-size: 14px;
+}
+.checkout-page .checkout-summary > div {
+  width: 200px;
 }
 .checkout-page .checkout-summary > * {
-  border-bottom: 1px solid #d7d7d7;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+}
+.checkout-page .checkout-summary div {
+  font-weight: bold;
+}
+.checkout-page .checkout-summary div > span {
+  float: right;
+  font-weight: normal;
+}
+.checkout-page .checkout-summary .total {
+  border-top: 1px solid #d7d7d7;
+  padding-top: 5px;
+  margin-top: 5px;
+}
+.checkout-page .checkout-summary .total span {
+  font-weight: bold;
 }
 .checkout-page .checkout-summary h1 {
   margin-top: 1px;

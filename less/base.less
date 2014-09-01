@@ -204,6 +204,33 @@ header {
     }
   }
 }
+.cart-contents {
+  font-size: 14px;
+  left: 50%;
+  padding: 10px 15px;
+  position: absolute;
+  top: 35px;
+  width: 200px;
+  .translate(-50%, 0);
+  .total {
+    border-top: 1px solid #cccccc;
+    margin-top: 5px;
+    padding-top: 5px;
+    span {
+      font-weight: bold !important;
+    }
+  }
+  div {
+    font-weight: bold;
+    > span {
+      float: right;
+      font-weight: normal;
+    }
+  }
+}
+.cart-link:hover .cart-contents {
+  display: block;
+}
 
 .header-search-placeholder {
   padding-right: 55px;
