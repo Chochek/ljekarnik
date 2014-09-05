@@ -3,7 +3,17 @@
     background: @gray-lighter;
     border-radius: 4px;
     margin-bottom: 30px;
-    padding: 10px 15px 5px;
+    padding: 10px 15px 15px;
+    overflow: hidden;
+    .collection-link {
+      background: none repeat scroll 0 0 white;
+      border: 5px solid @gray-lighter;
+      font-size: 12px;
+      overflow: hidden;
+      padding: 10px 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 }
 

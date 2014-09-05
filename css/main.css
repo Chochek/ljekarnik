@@ -821,7 +821,17 @@ footer .footer-payment-methods p {
   background: #f6f6f6;
   border-radius: 4px;
   margin-bottom: 30px;
-  padding: 10px 15px 5px;
+  padding: 10px 15px 15px;
+  overflow: hidden;
+}
+.collection-details .collection-description .collection-link {
+  background: none repeat scroll 0 0 white;
+  border: 5px solid #f6f6f6;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 10px 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .sorting-filtering {
   margin-bottom: 20px;
