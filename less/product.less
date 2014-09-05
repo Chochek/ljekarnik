@@ -43,6 +43,7 @@
   .product-thumbs {
     list-style: none;
     padding: 0;
+    overflow: hidden;
     li {
       position: relative;
       padding: 0 5px;
@@ -161,6 +162,15 @@
   .product-reviews-summary {
     overflow: hidden;
     margin-bottom: 10px;
+    .product-rating-wrapper {
+      > .star-rating {
+        float: left;
+      }
+      > a {
+        float: left;
+        clear: left;
+      }
+    }
   }
 
   .product-reviews {

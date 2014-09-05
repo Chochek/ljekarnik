@@ -51,4 +51,9 @@ $(function() {
     $("input.max-price-slider").on('slide', function(slideEvt) {
         $("span.max-price-value").text(slideEvt.value);
     });
+
+    $('.glyphicon-remove').on('click', function(e) {
+        $(this).parent().hide();
+        // i treba maknuti filter
+    });
 })

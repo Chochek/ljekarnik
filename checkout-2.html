@@ -19,7 +19,7 @@
 
 <body>
 
-    <div class="container checkout-page step-2">
+    <div class="container checkout-page">
         <header class="row">
             <nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation">
                 <div class="container">
@@ -44,49 +44,8 @@
                             </a>
                         </div>
                     </div>
-                    <div class="collapse navbar-collapse cart-area" id="ljekarnik-cart">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a class="customer-login-link" href="/login.html">Prijavite se</a>
-                            </li>
-                            <li>
-                                <a class="customer-register-link" href="/register.html">Registrirajte se</a>
-                            </li>
-                            <li class="cart-link hidden-xs">
-                                <a class="num-items-in-cart" href="/checkout.html">
-                                    <i class="glyphicon glyphicon-shopping-cart"></i>
-                                    <span>0 proizvoda</span>
-                                </a>
-                                <div class="cart-contents popover bottom">
-                                    <div class="arrow"></div>
-                                    <div>Cijena: <span>222,00 kn</span></div>
-                                    <div>PDV: <span>55,50 kn</span></div>
-                                    <div>Popust: <span>60,00 kn</span></div>
-                                    <div>Dostava: <span>0,00 kn</span></div>
-                                    <div class="total">
-                                        <div>Ukupno: <span>162,00 kn</span></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="checkout-link hidden-xs">
-                                <a class="btn btn-cart no-items" href="/checkout.html">Naručivanje</a>
-                            </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
                 </div>
             </nav>
-
-            <div class="col-xs-12 header-search-placeholder">
-
-                <form method="get" action="/search" id="header-search">
-                    <div class="form-group">
-                        <label class="sr-only" for="top-search-input">Pretraži</label>
-                        <input type="text" placeholder="Tražite proizvod? Ovdje počnite upisivati naziv i odaberite ga iz liste koja će se pojaviti..." autocomplete="off" accesskey="4" class="search-input ui-autocomplete-input form-control" name="q" id="top-search-input" role="textbox" aria-autocomplete="list" aria-haspopup="true">
-                        <button type="submit" class="btn"><i class="glyphicon glyphicon-search"></i></button>
-                    </div>
-                </form>
-
-            </div>
 
             <!-- Navigation -->
             <div class="main-nav col-xs-12">
@@ -200,21 +159,24 @@
         </header>
 
         <div class="row main-content">
-            <div class="col-md-10">
+            <div class="col-xs-12">
                 <div class="page-wrapper">
                     <div class="page-content">
                         <div class="checkout-process-status step-2">
                             <div class="checkout-box cart">
+                                <i class="glyphicon glyphicon-ok"></i>
                                 <div class="checkout-box-title hidden-xs">Košarica</div>
                                 <div class="checkout-box-number">1</div>
                                 <div class="checkout-box-description hidden-xs">Odabir količine proizvoda</div>
                             </div>
                             <div class="checkout-box address">
+                                <i class="glyphicon glyphicon-ok"></i>
                                 <div class="checkout-box-title hidden-xs">Adresa</div>
                                 <div class="checkout-box-number">2</div>
                                 <div class="checkout-box-description hidden-xs">Odabir količine proizvoda</div>
                             </div>
                             <div class="checkout-box payment">
+                                <i class="glyphicon glyphicon-ok"></i>
                                 <div class="checkout-box-title hidden-xs">Plaćanje</div>
                                 <div class="checkout-box-number">3</div>
                                 <div class="checkout-box-description hidden-xs">Odabir količine proizvoda</div>
@@ -322,15 +284,29 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="discount-code row">
-                                <label for="order-email" class="checkout-section-title">Popust</label>
-                                <p>Imate kod za popust? Unesite ga ovdje:</p>
-                                <form role="form" class="form-inline">
-                                    <div class="form-group">
-                                        <input class="form-control">
+                            <div class="summary-discount-code row">
+                                <div class="col-sm-6 checkout-summary">
+                                    <label class="checkout-section-title">Rekapitulacija</label>
+                                    <div class="col-xs-12 col-sm-6 no-padding">
+                                        <div>Cijena: <span>222,00 kn</span></div>
+                                        <div>PDV: <span>55,50 kn</span></div>
+                                        <div>Popust: <span>60,00 kn</span></div>
+                                        <div>Dostava: <span>0,00 kn</span></div>
+                                        <div class="total">
+                                            <div>Ukupno: <span>162,00 kn</span></div>
+                                        </div>
                                     </div>
-                                    <button class="btn btn-primary" type="submit">Primjeni</button>
-                                </form>
+                                </div>
+                                <div class="col-sm-6 discount-code">
+                                    <label for="order-email" class="checkout-section-title">Popust</label>
+                                    <p>Imate kod za popust? Unesite ga ovdje:</p>
+                                    <form role="form" class="form-inline">
+                                        <div class="form-group">
+                                            <input class="form-control">
+                                        </div>
+                                        <button class="btn btn-primary" type="submit">Primjeni</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="payment-method row">
                                 <label class="checkout-section-title" for="order-email">Kako biste željeli platiti narudžbu?</label>
@@ -359,17 +335,6 @@
                                     <div class="alert alert-info">Plaćanje na bankovni račun znači to i to.</div>
                                 </div>
                             </div>
-                            <div class="checkout-summary row">
-                                <div class="pull-right">
-                                    <div>Cijena: <span>222,00 kn</span></div>
-                                    <div>PDV: <span>55,50 kn</span></div>
-                                    <div>Popust: <span>60,00 kn</span></div>
-                                    <div>Dostava: <span>0,00 kn</span></div>
-                                    <div class="total">
-                                        <div>Ukupno: <span>162,00 kn</span></div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
@@ -378,19 +343,6 @@
                             <a role="button" href="/checkout-3.html" class="btn btn-cart">Nastavi na plaćanje kreditnom karticom</a>
                             <small id="cancel-purchase">ili <a href="/">povratak u web trgovinu</a></small>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-2 sidebar hidden-xs hidden-sm">
-                <div class="checkout-summary">
-                    <div>Cijena: <span>222,00 kn</span></div>
-                    <div>PDV: <span>55,50 kn</span></div>
-                    <div>Popust: <span>60,00 kn</span></div>
-                    <div>Dostava: <span>0,00 kn</span></div>
-                    <div class="total">
-                        <div>Ukupno: <span>162,00 kn</span></div>
                     </div>
                 </div>
             </div>
