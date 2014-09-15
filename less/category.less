@@ -42,3 +42,27 @@
     text-align: center;
   }
 }
+
+#reset {
+  margin-right: 10px;
+}
+
+#filters > div {
+  margin-left: 10px;
+  &.price-range-slider {
+    margin-top: 7px;
+    min-width: 280px;
+    b:first-child {
+      margin-right: 15px;
+    }
+    b:last-child {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media @extra-small {
+  .collection-details .collection-description .collection-link {
+    white-space: inherit;
+  }
+}

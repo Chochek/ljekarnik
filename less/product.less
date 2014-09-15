@@ -78,8 +78,16 @@
     }
   }
   .product-header {
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
+  }
+  .quantity-dropdown {
+    display: inline;
+    ul {
+      top: 28px;
+      left: auto;
+      right: 3px;
+      min-width: 100px;
+    }
   }
   .product-header-title {
     margin-bottom: 10px;
@@ -162,6 +170,9 @@
   .product-reviews-summary {
     overflow: hidden;
     margin-bottom: 10px;
+    .spr-summary-actions {
+      margin-top: 18px;
+    }
     .product-rating-wrapper {
       > .star-rating {
         float: left;
@@ -343,6 +354,16 @@
 
 .products-bundle {
   margin: 10px 0 40px;
+  .quantity-dropdown {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 150;
+    ul {
+      right: 0;
+      top: 35px;
+    }
+  }
   .row {
     position: relative;
   }
