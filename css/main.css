@@ -276,6 +276,7 @@ h3 {
 .table-responsive {
   border: 1px solid #d7d7d7;
   border-radius: 4px;
+  padding-bottom: 2px;
 }
 .table-responsive table {
   margin-bottom: 0;
@@ -1227,13 +1228,19 @@ footer .footer-payment-methods p {
 }
 .products-bundle .quantity-dropdown {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 10px;
+  top: 10px;
   z-index: 150;
 }
+.products-bundle .quantity-dropdown .btn {
+  border-radius: 0 0 0 4px;
+  padding: 0 12px;
+  height: 25px;
+}
 .products-bundle .quantity-dropdown ul {
-  right: 0;
-  top: 35px;
+  right: 0px;
+  top: 25px;
+  border-radius: 4px 0 0 4px;
 }
 .products-bundle .row {
   position: relative;
@@ -1574,6 +1581,12 @@ footer .footer-payment-methods p {
 .customer-register .action-bottom {
   margin-top: 30px;
 }
+.account-page .page-content .col-sm-9 {
+  padding-left: 0;
+}
+.account-page .page-content .col-sm-3 {
+  padding-right: 0;
+}
 .account-page .customer-details {
   margin-bottom: 15px;
   padding-bottom: 10px;
@@ -1588,6 +1601,20 @@ footer .footer-payment-methods p {
 }
 .account-page .customer-details p {
   margin-bottom: 5px;
+}
+.customer-details.customer-address {
+  border: 1px solid #d7d7d7;
+  height: 200px;
+  padding-top: 10px;
+}
+.address-actions {
+  bottom: 10px;
+  position: absolute;
+}
+.new-address {
+  position: absolute;
+  right: 30px;
+  top: 10px;
 }
 .checkout-process-status {
   height: 148px;

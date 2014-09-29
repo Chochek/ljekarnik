@@ -203,50 +203,24 @@
             <div class="col-xs-12">
                 <div class="page-wrapper account-page">
                     <div class="page-header">
-                        <h2 class="page-title">Detalji korisničkog računa i arhiva narudžbi</h2>
+                        <h2 class="page-title">Upravljanje adresama</h2>
+                        <button class="btn btn-primary new-address">Dodaj adresu</button>
                     </div>
                     <div class="page-content">
-                        <div class="col-sm-9">
-                            <p>Niste još naručivali.</p>
-                            <div class="table-responsive hidden-xs">
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th class="order">Narudžba</th>
-                                            <th class="date">Datum</th>
-                                            <th class="payment-status">Status plaćanja</th>
-                                            <th class="delivery-status">Status dostave</th>
-                                            <th class="total">Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="order">#1932</td>
-                                            <td class="date">Kol 07, 2014</td>
-                                            <td class="payment-status">u postupku</td>
-                                            <td class="delviery-status">nije poslano</td>
-                                            <td class="total">159,20 kn</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="customer-details customer-address col-md-4 col-sm-6 col-xs-12">
+                            <p class="customer-name">Ime Prezime</p>
+                            <p>ime.prezime@gmail.com</p>
+                            <div class="customer-addresses">
+                                <p>
+                                    Ulica Marka Markića 42 <br>
+                                    10000 Zagreb <br>
+                                    Croatia <br>
+                                    0123456789
+                                </p>
                             </div>
-                        </div>
-
-                        <div class="col-sm-3 account-page-sidebar">
-                            <div class="customer-details border-bottom">
-                                <p class="customer-name">Ime Prezime</p>
-                                <p>ime.prezime@gmail.com</p>
-                                <div class="customer-addresses">
-                                    <p>
-                                        Ulica Marka Markića 42 <br>
-                                        10000 Zagreb <br>
-                                        Croatia <br>
-                                        0123456789
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="add-customer-address">
-                                <a href="/addresses.html" class="view-address">Moje adrese (1)</a>
+                            <div class="address-actions">
+                                <button class="btn btn-primary">Uredi</button>
+                                <button class="btn btn-danger">Obriši</button>
                             </div>
                         </div>
                     </div>
