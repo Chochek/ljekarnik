@@ -359,15 +359,27 @@
     right: 10px;
     top: 10px;
     z-index: 150;
+    width: 80%;
+    text-align: right;
     .btn {
       border-radius: 0 0 0 4px;
-      padding: 0 12px;
-      height: 25px;
+      padding: 3px 20px 3px 12px;
+      max-width: 100%;
+      height: auto;
+      white-space: normal;
+      font-size: 12px;
+      line-height: 14px;
+      span.caret {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+      }
     }
     ul {
       right: 0px;
-      top: 25px;
+      top: auto;
       border-radius: 4px 0 0 4px;
+      font-size: 12px;
     }
   }
   .row {
@@ -503,6 +515,9 @@
     }
   }
   .products-bundle {
+    .quantity-dropdown {
+      width: 30%;
+    }
     .fa-plus {
       left: 50%;
       top: 100%;
