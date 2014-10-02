@@ -1285,6 +1285,16 @@ footer .footer-payment-methods p {
 .products-bundle .product-wrapper .product-image img {
   display: inline;
 }
+.products-bundle .product-wrapper .product-image a.product-image-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  text-align: left;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px 15px 18px;
+}
 .products-bundle .product-wrapper.last .fa-plus {
   display: none;
 }
